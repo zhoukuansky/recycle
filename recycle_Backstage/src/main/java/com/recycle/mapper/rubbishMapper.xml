@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.recycle.dao.rubbishMapper">
+    <resultMap id="BaseResultMap" type="com.recycle.model.rubbish">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="rubbis_type" jdbcType="VARCHAR" property="rubbis_type"/>
+        <result column="rub_price" jdbcType="REAL" property="rub_price"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, rubbis_type, rub_price
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from rubbish
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        *
+        from rubbish
+    </select>
+    <select id="findUserInformation" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from rubbish
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from rubbish
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="java.util.Map">
+    insert into rubbish (rubbis_type, rub_price
+      )
+    values ( #{type,jdbcType=VARCHAR}, #{price,jdbcType=REAL}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.recycle.model.rubbish">
+        insert into rubbish
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="rubbis_type != null">
+                rubbis_type,
+            </if>
+            <if test="rub_price != null">
+                rub_price,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="rubbis_type != null">
+                #{rubbis_type,jdbcType=VARCHAR},
+            </if>
+            <if test="rub_price != null">
+                #{rub_price,jdbcType=REAL},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.recycle.model.rubbish">
+        update rubbish
+        <set>
+            <if test="rubbis_type != null">
+                rubbis_type = #{rubbis_type,jdbcType=VARCHAR},
+            </if>
+            <if test="rub_price != null">
+                rub_price = #{rub_price,jdbcType=REAL},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.recycle.model.rubbish">
+    update rubbish
+    set rubbis_type = #{rubbis_type,jdbcType=VARCHAR},
+      rub_price = #{rub_price,jdbcType=REAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
