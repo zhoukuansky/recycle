@@ -24,6 +24,7 @@ public class SuperUserController {
 
     @Autowired
     private ExceptionHandle handle;
+
     @DeleteMapping("/deleteUser")
     @SystemControllerLog(logAction = "deleteUser", logContent = "删除用户")
     @ApiOperation(value = "删除用户信息", notes = "删除用户")

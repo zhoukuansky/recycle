@@ -9,13 +9,10 @@ import com.recycle.model.user_buy;
 import com.recycle.model.user_cre;
 import com.recycle.server.UserService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @Api(tags = {"普通用户自身操作"})
 @RestController
@@ -34,8 +31,8 @@ public class UserController {
     })
     public Result userInformation(@CurrentUser String[] tokenData) {
         Result result = ResultUtil.success();
-        int id=Integer.parseInt(tokenData[1]);
-        int type=Integer.parseInt(tokenData[0]);
+        int id = Integer.parseInt(tokenData[1]);
+        int type = Integer.parseInt(tokenData[0]);
         try {
             result = ResultUtil.success(service.findUserInformation(id, type));
         } catch (Exception e) {
@@ -50,9 +47,9 @@ public class UserController {
     @ApiOperation(value = "普通用户更新自身信息", notes = "普通用户更新自身信息")
     @ApiImplicitParams({
     })
-    public Result updateUser(@RequestBody user_cre user,@CurrentUser String[] tokenData) {
+    public Result updateUser(@RequestBody user_cre user, @CurrentUser String[] tokenData) {
         Result result = ResultUtil.success();
-        int id=Integer.parseInt(tokenData[1]);
+        int id = Integer.parseInt(tokenData[1]);
         try {
             result = ResultUtil.success(service.updateUser(id, user));
         } catch (Exception e) {
@@ -67,9 +64,9 @@ public class UserController {
     @ApiOperation(value = "更新回收站信息", notes = "更新回收站信息")
     @ApiImplicitParams({
     })
-    public Result updateRecycleUser(@RequestBody user_buy user,@CurrentUser String[] tokenData) {
+    public Result updateRecycleUser(@RequestBody user_buy user, @CurrentUser String[] tokenData) {
         Result result = ResultUtil.success();
-        int id=Integer.parseInt(tokenData[1]);
+        int id = Integer.parseInt(tokenData[1]);
         try {
             result = ResultUtil.success(service.updateRecycleUser(id, user));
         } catch (Exception e) {

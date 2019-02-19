@@ -1,7 +1,6 @@
 package com.recycle.dao;
 
 import com.recycle.model.rubbish;
-import com.recycle.model.user_buy;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -21,7 +20,7 @@ public interface rubbishMapper {
 
     int updateByPrimaryKey(rubbish record);
 
-    List<user_buy> findAll();
+    List<rubbish> findAll();
 
     Object findUserInformation(Integer id);
 }

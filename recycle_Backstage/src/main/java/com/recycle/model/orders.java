@@ -1,5 +1,7 @@
 package com.recycle.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class orders {
@@ -11,19 +13,20 @@ public class orders {
 
     private Integer rub_id;
 
-    private Integer order_user_c_id;
-
-    private Integer order_user_b_id;
-
-    private Integer order_rub_id;
-
     private String order_rub_infor;
 
     private Float order_moneny;
 
-    private String order_time_begin;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date order_time_begin;
 
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date order_time_deal;
+
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date order_time_finish;
+
+    private Integer status;
 
     public Integer getId() {
         return id;
@@ -57,30 +60,6 @@ public class orders {
         this.rub_id = rub_id;
     }
 
-    public Integer getOrder_user_c_id() {
-        return order_user_c_id;
-    }
-
-    public void setOrder_user_c_id(Integer order_user_c_id) {
-        this.order_user_c_id = order_user_c_id;
-    }
-
-    public Integer getOrder_user_b_id() {
-        return order_user_b_id;
-    }
-
-    public void setOrder_user_b_id(Integer order_user_b_id) {
-        this.order_user_b_id = order_user_b_id;
-    }
-
-    public Integer getOrder_rub_id() {
-        return order_rub_id;
-    }
-
-    public void setOrder_rub_id(Integer order_rub_id) {
-        this.order_rub_id = order_rub_id;
-    }
-
     public String getOrder_rub_infor() {
         return order_rub_infor;
     }
@@ -97,19 +76,38 @@ public class orders {
         this.order_moneny = order_moneny;
     }
 
-    public String getOrder_time_begin() {
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
+    public Date getOrder_time_begin() {
         return order_time_begin;
     }
 
-    public void setOrder_time_begin(String order_time_begin) {
-        this.order_time_begin = order_time_begin == null ? null : order_time_begin.trim();
+    public void setOrder_time_begin(Date order_time_begin) {
+        this.order_time_begin = order_time_begin;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
+    public Date getOrder_time_deal() {
+        return order_time_deal;
+    }
+
+    public void setOrder_time_deal(Date order_time_deal) {
+        this.order_time_deal = order_time_deal;
+    }
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
     public Date getOrder_time_finish() {
         return order_time_finish;
     }
 
     public void setOrder_time_finish(Date order_time_finish) {
         this.order_time_finish = order_time_finish;
+    }
+
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
     }
 }

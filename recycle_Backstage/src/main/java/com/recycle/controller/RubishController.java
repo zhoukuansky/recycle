@@ -5,7 +5,6 @@ import com.recycle.exception.ExceptionHandle;
 import com.recycle.exception.ResultUtil;
 import com.recycle.model.Result;
 import com.recycle.model.rubbish;
-import com.recycle.model.user_buy_worker;
 import com.recycle.server.RubbishService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -36,7 +35,7 @@ public class RubishController {
     public Result insertRubbish(@RequestParam("type") String type, @RequestParam("price") String price) {
         Result result = ResultUtil.success();
         try {
-            Map insertMap = service.insert(type,price);
+            Map insertMap = service.insert(type, price);
             result = ResultUtil.success(insertMap);
         } catch (Exception e) {
             result = handle.exceptionGet(e);

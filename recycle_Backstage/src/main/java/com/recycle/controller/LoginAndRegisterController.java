@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
+
 @Api(tags = {"注册和登陆"})
 @RestController
 @RequestMapping("/loginAndRegister")
@@ -29,7 +30,7 @@ public class LoginAndRegisterController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "tel", value = "用户tel", required = true, dataType = "String"),
             @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "String"),
-            @ApiImplicitParam(name = "type", value = "账户角色", required = true, dataType = "int"),
+            @ApiImplicitParam(name = "type", value = "账户角色，“1”代表回收站，“2”代表用户，“3”代表超级管理员", required = true, dataType = "int"),
     })
     public Result insertUser(@RequestParam("tel") String tel, @RequestParam("password") String password, @RequestParam("type") int type) {
         Result result = ResultUtil.success();
@@ -49,7 +50,7 @@ public class LoginAndRegisterController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "tel", value = "用户tel", required = true, dataType = "String"),
             @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "String"),
-            @ApiImplicitParam(name = "type", value = "账户角色", required = true, dataType = "int"),
+            @ApiImplicitParam(name = "type", value = "账户角色，“1”代表回收站，“2”代表用户，“3”代表超级管理员", required = true, dataType = "int"),
     })
     public Result login(@RequestParam("tel") String tel, @RequestParam("password") String password, @RequestParam("type") int type) {
         Result result = ResultUtil.success();

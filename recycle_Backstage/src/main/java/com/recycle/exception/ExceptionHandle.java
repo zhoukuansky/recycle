@@ -4,6 +4,8 @@ import com.recycle.model.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DuplicateKeyException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -30,6 +32,10 @@ public class ExceptionHandle {
             return ResultUtil.error(MyException.getCode(), MyException.getMessage());
         } else if (e instanceof DuplicateKeyException) {
             return ResultUtil.error(ExceptionEnum.USER_EXIST);
+        } else if (e instanceof HttpRequestMethodNotSupportedException) {
+            return ResultUtil.error(ExceptionEnum.METHOD_FAILED);
+        } else if (e instanceof MissingServletRequestParameterException) {
+            return ResultUtil.error(ExceptionEnum.PARAMETER_ERROR);
         }
         LOGGER.error("【系统异常】{}", e);
         return ResultUtil.error(ExceptionEnum.UNKNOW_ERROR);

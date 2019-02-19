@@ -30,7 +30,7 @@ public class Swagger2 {
         List<Parameter> list = Arrays.asList(
                 new ParameterBuilder()
                         .name("token")
-                        .description("token")
+                        .description("token（只有登陆和新建用户可不填）")
                         .modelRef(new ModelRef("string"))
                         .parameterType("header")
                         .build()
