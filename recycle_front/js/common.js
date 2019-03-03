@@ -1,1 +1,1 @@
-var url="http://114.115.243.22/recycle/";
+var url="http://114.115.243.22/recycle";

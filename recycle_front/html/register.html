@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="../css/style.css">
         <link rel="icon" href="../ico.ico" />  
 
+        <script src="../assets/jquery/jquery-3.2.1.min.js"></script>
 		<script src="../assets/vue/vue.min.js"></script>
 		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 		<script src="../assets/mylibrary/cookie.js"></script>
@@ -30,15 +31,15 @@
         <div class="page-container">
             <h1>用户注册</h1>
             <div class="form" id="register">
-                <input type="text" name="username" class="username" placeholder="tel">
-                <input type="password" name="password" class="password" placeholder="Password">
-                	<select class="register" >
+                <input type="text" name="username" id="username" class="username" placeholder="tel">
+                <input type="password" name="password" id="password" class="password" placeholder="Password">
+                	<select class="register" v-model="selected">
                         <option value="1">回收站</option>
                         <option value="2">普通用户</option>
                         <option value="3">超级管理员</option>
                     </select>
                 </div>
-                <button type="submit" id="submit">注册</button>
+                <button type="button" id="submit">注册</button>
                 <div class="error"><span>+</span></div>
             </div>
         </div>
@@ -48,6 +49,7 @@
         <script src="../js/supersized.3.2.7.min.js"></script>
         <script src="../js/supersized-init.js"></script>
         <script src="../js/scripts.js"></script>
+        <script src="../js/register.js"></script>
     </body>
 
 </html>
