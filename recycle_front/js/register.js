@@ -1,4 +1,3 @@
-
 var registerVue = new Vue({
     el: '#register',
     data: {
@@ -48,7 +47,7 @@ $("#submit").click(function () {
                         alert("用户已经存在");
                     }
                     else {
-                        $("#tishi").html("用户名或密码错误");
+                        alert("用户名或密码错误");
                     }
                 },
                 error: function (res) {
