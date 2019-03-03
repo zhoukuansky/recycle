@@ -153,6 +153,7 @@ public class UserService {
     //更新回收站信息
     public Object updateRecycleUser(Integer id, user_buy user) throws Exception {
         try {
+            user.setId(id);
             userBuyMapper.updateByPrimaryKeySelective(user);
         } catch (Exception e) {
             throw new DescribeException(ExceptionEnum.UPDATE_ERROR);
@@ -163,6 +164,7 @@ public class UserService {
     //更新普通用户信息
     public Object updateUser(Integer id, user_cre user) throws Exception {
         try {
+            user.setId(id);
             userCreMapper.updateByPrimaryKeySelective(user);
         } catch (Exception e) {
             throw new DescribeException(ExceptionEnum.UPDATE_ERROR);

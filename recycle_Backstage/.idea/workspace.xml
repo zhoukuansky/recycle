@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8ff3e47-f50f-49b0-a818-cc57dbecd834" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/recycle/controller/RecycleWorkerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/recycle/controller/RecycleWorkerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/recycle/dao/user_creMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/recycle/dao/user_creMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/recycle/server/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/recycle/server/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/recycle/util/OriginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/recycle/util/OriginFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../recycle_front/html/user_login_jump.html" beforeDir="false" afterPath="$PROJECT_DIR$/../recycle_front/html/user_login_jump.html" afterDir="false" />
     </list>
@@ -14,6 +17,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/recycle$RecycleApplication.ic" NAME="RecycleApplication Coverage Results" MODIFIED="1551603783014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="recycle" />
@@ -32,17 +38,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/jjwtToken/UserInterceptor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+            <state relative-caret-position="350">
+              <caret line="44" column="48" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/util/OriginFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="24" column="127" selection-start-line="24" selection-start-column="122" selection-end-line="24" selection-end-column="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="53" column="56" lean-forward="true" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/util/OriginFilter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/server/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="24" column="128" selection-start-line="24" selection-start-column="128" selection-end-line="24" selection-end-column="128" />
+            <state relative-caret-position="229">
+              <caret line="166" column="27" lean-forward="true" selection-start-line="166" selection-start-column="27" selection-end-line="166" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -73,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/controller/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/server/RecycleWorkerService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/mapper/rubbishMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/recycle/controller/RecycleWorkerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/controller/RubishController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/controller/LoginAndRegisterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/dao/SystemLogMapper.java" />
@@ -96,6 +119,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/jjwtToken/UserInterceptor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/jjwtToken/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/recycle/util/OriginFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/recycle/controller/RecycleWorkerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/recycle/dao/user_creMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/recycle/server/UserService.java" />
       </list>
     </option>
   </component>
@@ -143,9 +169,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="157" />
-    <option name="y" value="77" />
-    <option name="width" value="1655" />
+    <option name="x" value="46" />
+    <option name="y" value="90" />
+    <option name="width" value="1828" />
     <option name="height" value="889" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -308,7 +334,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551082228989" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551610113573" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -425,18 +451,18 @@
       <workItem from="1550809450845" duration="2163000" />
       <workItem from="1551073393747" duration="4233000" />
       <workItem from="1551279499989" duration="667000" />
-      <workItem from="1551603183734" duration="591000" />
+      <workItem from="1551603183734" duration="2582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32051000" />
+    <option name="totallyTimeSpent" value="34042000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="126" y="62" width="1324" height="711" extended-state="0" />
+    <frame x="37" y="72" width="1462" height="711" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4983108" visible="true" weight="0.35624012" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4983108" visible="true" weight="0.28917378" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -446,7 +472,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.15186246" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.208981" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -470,41 +496,6 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20375335" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" visible="true" weight="0.2407932" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" visible="true" weight="0.2407932" />
-      <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.116621986" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -522,27 +513,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/model/SystemLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/server/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="40" column="53" selection-start-line="40" selection-start-column="40" selection-end-line="40" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.2.RELEASE/spring-boot-autoconfigure-2.1.2.RELEASE-sources.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="81" column="32" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/spring/boot/mybatis-spring-boot-autoconfigure/1.3.2/mybatis-spring-boot-autoconfigure-1.3.2-sources.jar!/org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -577,38 +547,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/RecycleWorkerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="103" column="52" selection-start-line="103" selection-start-column="52" selection-end-line="103" selection-end-column="52" />
-          <folding>
-            <element signature="e#828#864#0" />
-            <element signature="method#insertRecycleWorker#0;class#RecycleWorkerController#0" />
-            <element signature="e#1862#1895#0" />
-            <element signature="method#RecycleWorkerList#0;class#RecycleWorkerController#0" />
-            <element signature="e#2792#2825#0" />
-            <element signature="method#workerInformation#0;class#RecycleWorkerController#0" />
-            <element signature="e#3484#3512#0" />
-            <element signature="method#updateWorker#0;class#RecycleWorkerController#0" />
-            <element signature="method#deleteWorker#0;class#RecycleWorkerController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/server/RecycleWorkerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="57" column="8" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="38" />
-          <folding>
-            <element signature="method#insert#0;class#RecycleWorkerService#0" />
-            <element signature="method#findAllwordker#0;class#RecycleWorkerService#0" />
-            <element signature="method#updateWorker#0;class#RecycleWorkerService#0" />
-            <element signature="e#1862#1863#0" expanded="true" />
-            <element signature="e#1907#1908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/test1/grades.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/model/user_buy.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -618,20 +556,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/test1/orders.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/LoginAndRegisterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="6" column="38" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="36" selection-start-line="36" selection-end-line="37" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/mapper/user_buyMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -922,13 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/jjwtToken/UserInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/jjwtToken/WebSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66">
@@ -936,10 +853,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/server/RecycleWorkerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="24" column="60" selection-start-line="24" selection-start-column="51" selection-end-line="24" selection-end-column="60" />
+          <folding>
+            <element signature="method#findAllwordker#0;class#RecycleWorkerService#0" />
+            <element signature="method#updateWorker#0;class#RecycleWorkerService#0" />
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1907#1908#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/SuperUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="50" column="46" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/LoginAndRegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/jjwtToken/UserInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="44" column="48" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/RecycleWorkerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="89" column="44" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="44" />
+          <folding>
+            <element signature="method#RecycleWorkerList#0;class#RecycleWorkerController#0" />
+            <element signature="method#workerInformation#0;class#RecycleWorkerController#0" />
+            <element signature="method#deleteWorker#0;class#RecycleWorkerController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/dao/user_creMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="19" column="53" lean-forward="true" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/util/OriginFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="128" selection-start-line="24" selection-start-column="128" selection-end-line="24" selection-end-column="128" />
+        <state relative-caret-position="396">
+          <caret line="24" column="127" selection-start-line="24" selection-start-column="122" selection-end-line="24" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="53" column="56" lean-forward="true" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/recycle/server/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="166" column="27" lean-forward="true" selection-start-line="166" selection-start-column="27" selection-end-line="166" selection-end-column="27" />
         </state>
       </provider>
     </entry>
