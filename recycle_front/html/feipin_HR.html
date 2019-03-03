@@ -2,7 +2,6 @@
     <head>  
     	<meta charset="UTF-8">
         <title>人员管理</title>  
-        <link rel="icon" href="../ico.ico" />  
         <style type="text/css">  
              body {
     			background-color: burlywood;
@@ -10,9 +9,10 @@
     			text-align: center;
     			color: #fff;
 				} 
-        </style>   
-        
-        <script src="../assets/jquery/jquery-3.2.1.min.js"></script>
+        </style>  
+		<link rel="icon" href="../ico.ico" />  
+	
+		<script src="../assets/jquery/jquery-3.2.1.min.js"></script>
 		<script src="../assets/vue/vue.min.js"></script>
 		<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
 		<script src="../assets/mylibrary/cookie.js"></script>
@@ -23,12 +23,12 @@
     <body onload="initPage()">  
         <center>      
             <h1>员工信息列表</h1>  
-            <table border="1" width="500px">  
+            <table border="1" width="800px">  
                   
                 <tr>  
                   
                     <td class="noborder_1">工&nbsp;&nbsp;号</td>  
-                    <td class="noborder_2" ><input style="width:80%" type="text" id="sid"/></td>  
+                    <td class="noborder_2" ><input style="width:50%" type="text" id="sid"/></td>  
                 </tr>  
                   
                 <tr>  
@@ -71,7 +71,7 @@
                   
             </table>  
             <br>  
-            <table border="1" width="500px" id="tableInfo">  
+            <table border="1" width="800px" id="tableInfo">  
                 <tr align="center">  
                     <td class="noborder_1"><input id="all" type="checkbox" onclick="selectAll(this)" /></td>  
                     <td class="noborder_1">工号</td>  
