@@ -1,4 +1,3 @@
-
 var registerVue = new Vue({
     el: '#register',
     data: {
@@ -25,7 +24,7 @@ $("#submit").click(function () {
             {
                 $("#password").val("");
                 $("#password").focus();
-                alert("请输入5到16位密码！");
+                alert("请输入5到16位密码！且不能有特殊符号");
             }
         }
         else {
@@ -48,7 +47,7 @@ $("#submit").click(function () {
                         alert("用户已经存在");
                     }
                     else {
-                        $("#tishi").html("用户名或密码错误");
+                        alert("用户名或密码错误");
                     }
                 },
                 error: function (res) {

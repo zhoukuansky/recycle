@@ -1,14 +1,22 @@
+var loginVue = new Vue({
+    el: '#login',
+    data: {
+        selected:"1",
+    }
+})
+
 $("#submit").click(function () {
     var userName = $.trim($("#username").val());
     var passWord = $.trim($("#password").val());
+    console.log(loginVue.selected)
 
     if (userName != "" && passWord != "") {
         //alert(passWord);
-        var uPattern = /^[a-zA-Z0-9]{2,10}$/;
+        var uPattern = /^[a-zA-Z0-9]{11,11}$/;
         var wPattern = /^[a-zA-Z0-9]{5,16}$/;
         if (!uPattern.test(userName)) {
             $("#username").val("");
-            $("#tishi").html("请输入2到10位用户名！");
+            alert("请输入11位手机号！");
             if (!wPattern.test(passWord)) {
                 $("#password").val("");
             }
@@ -16,33 +24,36 @@ $("#submit").click(function () {
             {
                 $("#password").val("");
                 $("#password").focus();
-                $("#tishi").html("请输入5到16位密码！");
+                alert("请输入5到16位密码！");
             }
         }
         else {
             $.ajax({
-                url: url + "/login",
-                type: "POST",
+                url: url + "/loginAndRegister/login",
+                type: "GET",
                 dataType: "json",
                 data: {
-                    username: userName,
+                    tel: userName,
                     password: passWord,
+                    type:loginVue.selected,
                 },
                 headers: {},
                 success: function (res) {
                     if (res.status == 0) {
-                        if (res.data.role == "admin") {
-                            document.cookie = "user=" + userName;
-                            document.cookie = "Token=" + res.data.token;
-                            window.location.href = "admin.html?idid=0";
+                        setCookie("token",res.data.token);
+                        //alert(getCookie("token"))
+                        if(res.data.type==1){
+                            window.location.href = "fepin_login_jump.html";
                         }
-                        else {
-                            alert("您不是管理员，请去往用户登陆");
-                            window.location.href = "../phonePages/phoneLogin.html";
+                        if(res.data.type==2){
+                            window.location.href = "user_login_jump.html";
+                        }
+                        if(res.data.type==3){
+                            window.location.href = "super_login_jump.html";
                         }
                     }
                     else {
-                        $("#tishi").html("用户名或密码错误");
+                        alert("用户名或密码错误,或者角色错误");
                     }
                 },
                 error: function (res) {
