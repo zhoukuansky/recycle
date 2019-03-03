@@ -29,11 +29,18 @@
 
         <div class="page-container">
             <h1>用户登录</h1>
-            <div>
-                <input type="text" name="username" class="username" placeholder="Username">
-                <input type="password" name="password" class="password" placeholder="Password">
+           <div class="form">
+           	<select class="login" id="login">
+                        <option value="0" selected="">用户身份</option>
+                        <option value="1">回收站</option>
+                        <option value="2">普通用户</option>
+                        <option value="3">超级管理员</option>
+                    </select>
+                <input type="text" name="username" class="username" placeholder="tel">
+                <input type="password" name="password" class="password" placeholder="Password">	
+                </div>
+                <button type="login">登录</button>
                 <div class="error"><span>+</span></div>
-                <button type="submit">登录</button>
             </div>
         </div>
        
