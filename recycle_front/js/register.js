@@ -25,7 +25,7 @@ $("#submit").click(function () {
             {
                 $("#password").val("");
                 $("#password").focus();
-                alert("请输入5到16位密码！");
+                alert("请输入5到16位密码！且不能有特殊符号");
             }
         }
         else {
