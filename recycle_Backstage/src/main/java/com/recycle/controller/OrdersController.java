@@ -183,11 +183,11 @@ public class OrdersController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id", value = "id", required = true, dataType = "int"),
     })
-    public Result deleteOrders(@RequestParam("id") int id,@CurrentUser String[] tokenData) throws Exception{
+    public Result deleteOrders(@RequestParam("id") int id, @CurrentUser String[] tokenData) throws Exception {
         Result result = ResultUtil.success();
         int type = Integer.parseInt(tokenData[0]);
         try {
-            service.deleteOrders(type,id);
+            service.deleteOrders(type, id);
             result = ResultUtil.success();
         } catch (Exception e) {
             result = handle.exceptionGet(e);

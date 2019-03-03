@@ -81,14 +81,13 @@ public class OrdersService {
         return mapper.selectByPrimaryKey(id);
     }
 
-    public void deleteOrders(int type,int id) {
+    public void deleteOrders(int type, int id) {
         orders res = mapper.selectByPrimaryKey(id);
-        if(res.getStatus()==1){
+        if (res.getStatus() == 1) {
             mapper.deleteByPrimaryKey(id);
             return;
-        }
-        else{
-            if(type==2){
+        } else {
+            if (type == 2) {
                 throw new DescribeException(ExceptionEnum.NEED_ROLES);
             }
             mapper.deleteByPrimaryKey(id);
