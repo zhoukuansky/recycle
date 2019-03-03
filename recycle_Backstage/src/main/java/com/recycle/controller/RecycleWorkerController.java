@@ -3,6 +3,7 @@ package com.recycle.controller;
 import com.recycle.aop.SystemControllerLog;
 import com.recycle.exception.ExceptionHandle;
 import com.recycle.exception.ResultUtil;
+import com.recycle.jjwtToken.CurrentUser;
 import com.recycle.model.Result;
 import com.recycle.model.user_buy_worker;
 import com.recycle.server.RecycleWorkerService;
@@ -31,10 +32,10 @@ public class RecycleWorkerController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "tel", value = "工作人员tel", required = true, dataType = "String"),
             @ApiImplicitParam(name = "name", value = "姓名", required = true, dataType = "String"),
-            @ApiImplicitParam(name = "RecycleID", value = "回收站ID", required = true, dataType = "int"),
     })
-    public Result insertRecycleWorker(@RequestParam("tel") String tel, @RequestParam("name") String name, @RequestParam("RecycleID") int recycleId) {
+    public Result insertRecycleWorker(@RequestParam("tel") String tel, @RequestParam("name") String name, @CurrentUser String[] tokenData) {
         Result result = ResultUtil.success();
+        int recycleId = Integer.parseInt(tokenData[1]);
         try {
             Map insertMap = service.insert(tel, name, recycleId);
             result = ResultUtil.success(insertMap);
