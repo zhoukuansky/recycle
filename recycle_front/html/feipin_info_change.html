@@ -16,13 +16,15 @@
 	<body>
 		<div class="info_box">
             <h1>废品站信息修改</h1>
-             <div class="form">
-                <input type="text" name="username" class="username" placeholder="Username">
-                <input type="text" name="address" class="address" placeholder="address">
-                <input type="email" name="email" class="email" placeholder="email">
-                <input type="tel" name="tel" class="tel" placeholder="tel">
-                <button type="submit">提交</button>
+             <div class="form" id="info">
+                    <input type="tel" name="tel" class="tel" v-model="tel" placeholder="tel">
+                    <input type="text" name="name" v-model="name" class="name" placeholder="name">
+                    <input type="text" name="address" class="address" v-model="address" placeholder="address">
+                    <input type="email" name="email" class="email" v-model="email" placeholder="email">
+                    <button type="submit" id="submit">提交</button>
             </div>
          </div>
 	</body>
 </html>
+
+<script src="../js/feipin_info_change.js"></script>
