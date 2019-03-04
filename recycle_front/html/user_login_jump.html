@@ -1,135 +1,317 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>您的主页</title>
-		<link rel="stylesheet" type="text/css" href="../css/user_login_jump.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/bottom.css"/>
-		<link rel="stylesheet" type="text/css" href="../css/top.css"/>
-	</head>
-	<body>
-		<div class="head">
-			<div class="header">
-				<div class="header_1">
-				<span class="header_title">拾荒网—做您身边的拾荒者 </span>
-				</div>
-				<div class="header_search">
-					<div class=" header_search_box">
-						<input type="text" class="header_search_box_input" />
-					</div>
-					<div class="header_search_btn">
-						<button class=" header_search_btn_detail">
-							<i class=" header_search_btn_icon"></i>
-						</button>
-					  	</div>
-					</div>
-					<div class="header_2">
-						<ul>
-							<li><a href="user_login_jump.html">已登录|</a></li>
-							<li><a href="register.html">注册|</a></li>
-							<li><a href="">反馈|</a></li>
-							<li><a href="">论坛|</a></li>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dashboard - Bootstrap Admin</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />    
+    
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+    
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+    <link href="../css/font-awesome.css" rel="stylesheet" />
+    
+    <link href="../css/adminia.css" rel="stylesheet" /> 
+    <link href="../css/adminia-responsive.css" rel="stylesheet" /> 
+    
+    <link href="../css/pages/dashboard.css" rel="stylesheet" /> 
+    
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
+<body>
+	
+<div class="navbar navbar-fixed-top">
+	
+	<div class="navbar-inner">
+		
+		<div class="container">
+			
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 
+				<span class="icon-bar"></span> 				
+			</a>
+			
+			<a class="brand" href="./">Adminia Admin</a>
+			
+			<div class="nav-collapse">
+			
+				<ul class="nav pull-right">
+					<li>
+						<a href="#"><span class="badge badge-warning">7</span></a>
+					</li>
+					
+					<li class="divider-vertical"></li>
+					
+					<li class="dropdown">
+						
+						<a data-toggle="dropdown" class="dropdown-toggle " href="#">
+							Shi Dashuai <b class="caret"></b>							
+						</a>
+						
+						<ul class="dropdown-menu">
+							<li>
+								<a href="account.html"><i class="icon-user"></i>账户设置  </a>
+							</li>
+							
+							<li>
+								<a href="change_password.html"><i class="icon-lock"></i>修改密码</a>
+							</li>
+							
+							<li class="divider"></li>
+							
+							<li>
+								<a href="index.html"><i class="icon-off"></i>退出</a>
+							</li>
 						</ul>
-					</div>
-				</div>
-				<div class="header_nav">
-					<div class="header_nav_box">
-						<div class="header_nav_box_ul">
-							<ul>
-							<li><a href="index.html" class="current">首页</a></li>
-	            			<li><a href="web_info.html">网站信息</a></li>
-	            			<li><a href="feipin_info.html">废品介绍</a></li>
-	            			<li><a href="forum.html">论坛</a></li>
-	            			<li><a href="buyer_info.html">商家介绍</a></li>
-	            			<li><a href="news.html">新闻资讯</a></li>	         					
-							</ul>
-						</div>
-						<div class=" header_nav_box_fb">
-							<a href="#" class="header_nav_box_fb_text">商家入驻</a>
-						</div>
-					</div>
-				</div>
-		</div>
-		<div class="article_box">
-			<div class="article">
-				<div class="box_name">您的主页</div>
-				<div class="box_detail">
-					<ul>	
-						<li style="background-color: #1CAFFC;"><a href="user_info_change.html">信息管理</a></li>
-						<li style="background-color: coral;" id="information">
-							<div class="info_box">
-							<span style="color: blanchedalmond;">tel:</span><p style="color:yellow;">{{tel}}</p>
-							<span style="color: blanchedalmond;">address:</span><p style="color:yellow;">{{address}}</p>
-							<span style="color: blanchedalmond;">email:</span><p style="color:yellow;">{{email}}</p>
-							<span style="color: blanchedalmond;">name:</span><p style="color:yellow;">{{name}}</p>
-							</div>
-						</li>
-						<li style="background-color: blanchedalmond;"><a href="user_order_manage.htmll">订单管理<a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="bottom">
-		<div class="bottom_box">
-			<div class="bottom_01">
-				<p><span>友情链接：</span>
-					<a href="http://ershou.huangye88.com/">中国二手网 |</a>
-			        <a href="http://www.epwho.com/">环保网 |</a> 
-			        <a href="https://www.pvc123.com/">中国塑料门户网 |</a>
-			        <a href="http://www.chinapaper.net/"> 中国纸业网 |</a>
-			  		<a href="http://www.feipinzhan.com/">中国废品站 |</a>
-			        <a href="http://www.bianbao.net/">变宝网 |</a> 	    
-				</p>
-			</div>
-			<div class="bottom_02">
-				<ul>
-					<li><a href="">服务条款 |</a></li>
-					<li><a href="">版权隐私  |</a></li>
-					<li><a href="">商务合作  |</a></li>
-					<li><a href="">关于我们   | </a></li>
-					<li><a href="">加入我们   |</a></li>
-					<li><a href="">联系我们   |</a></li>
-					<li><a href="">侵权投诉   |</a></li>
-				</ul>
-			</div>
-			<div class="bottom_03">
-				<ul>
-					<li>
-						<p class="pfrt">内容入驻</p>
-						<p>电话：18398900221/p>
-						<p>QQ：1296558746</p>
-					</li>
-					<li>
-						<p class="pfrt">广告服务</p>
-						<p>电话：18398900221</p>
-						<p>手机：18398900221</p>
-					</li>
-					<li>
-						<p class="pfrt">内容联合制作</p>
-						<p>电话：18398900221</p>
-						<p>QQ：1296558746 </p>
-					</li>
-					<li>
-						<p class="pfrt">投资合作</p>
-						<p>手机（微信号）：18398900221</p>
-						<p>邮箱：shiwenfeng1998@qq.com </p>
-					</li>
-					<li>
-						<p class="pfrt">客服服务</p>
-						<p>电话：18398900221</p>
-						<p>邮箱：shiwenfeng1998@qq.com </p>
 					</li>
 				</ul>
-			</div>
-			<div class="bottom_04">
-				<p>Welcome To ShiHuangWang</p>
-				<p>工作时间：9：00-19：00</p>
-				<p>©拾荒网版权所有 </p>
-			</div>
-		</div>
-	</div>	
+				
+			</div> <!-- /nav-collapse -->
+			
+		</div> <!-- /container -->
+		
+	</div> <!-- /navbar-inner -->
+	
+</div> <!-- /navbar -->
 
-	</body>
+
+
+
+<div id="content">
+	
+	<div class="container">
+		
+		<div class="row">
+			
+			<div class="span3">
+				
+				<div class="account-container">
+				
+					<div class="account-avatar">
+						<img src="../img/headshot.png" alt="" class="thumbnail" />
+					</div> <!-- /account-avatar -->
+				
+					<div class="account-details">
+					
+						<span class="account-name">Shi Dashuai</span>
+						
+						<span class="account-role">Administrator</span>
+						
+						<span class="account-actions">
+							<a href="javascript:;">Profile</a> |
+							
+							<a href="javascript:;">Edit Settings</a>
+						</span>
+					
+					</div> <!-- /account-details -->
+				
+				</div> <!-- /account-container -->
+				
+				<hr />
+				
+				<ul id="main-nav" class="nav nav-tabs nav-stacked">
+					
+					<li class="active">
+						<a href="user_login_jump.html">
+							<i class="icon-home"></i>
+							我的主页		
+						</a>
+					</li>
+					
+					<li>
+						<a href="faq.html">
+							<i class="icon-pushpin"></i>
+							新建订单
+						</a>
+					</li>
+					
+					<li>
+						<a href="plans.html">
+							<i class="icon-th-list"></i>
+							订单管理	
+						</a>
+					</li>
+					
+					<li>
+						<a href="grid.html">
+							<i class="icon-th-large"></i>
+							用户信息修改	
+						
+						</a>
+					</li>
+					
+					<li>
+						<a href="charts.html">
+							<i class="icon-signal"></i>
+							查看自己信息	
+						</a>
+					</li>
+					
+					<li>
+						<a href="account.html">
+							<i class="icon-user"></i>
+							用户账号							
+						</a>
+					</li>
+					
+					<li>
+						<a href="login.html">
+							<i class="icon-lock"></i>
+							登录	
+						</a>
+					</li>
+					
+				</ul>	
+				
+				<hr />
+				
+				<div class="sidebar-extra">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+				</div> <!-- .sidebar-extra -->
+				
+				<br />
+		
+			</div> <!-- /span3 -->
+			
+			
+			
+			<div class="span9">
+				
+				<h1 class="page-title">
+					<i class="icon-home"></i>
+					我的主页					
+				</h1>
+				
+				<div class="stat-container">
+										
+					<div class="stat-holder">						
+						<div class="stat">							
+							<span>564</span>							
+							浏览量						
+						</div> <!-- /stat -->						
+					</div> <!-- /stat-holder -->
+					
+					<div class="stat-holder">						
+						<div class="stat">							
+							<span>423</span>							
+							留言量							
+						</div> <!-- /stat -->						
+					</div> <!-- /stat-holder -->
+					
+					<div class="stat-holder">						
+						<div class="stat">							
+							<span>96</span>							
+							订单总数
+						</div> <!-- /stat -->						
+					</div> <!-- /stat-holder -->
+					
+					<div class="stat-holder">						
+						<div class="stat">							
+							<span>2</span>							
+							待评分							
+						</div> <!-- /stat -->						
+					</div> <!-- /stat-holder -->
+					
+				</div> <!-- /stat-container -->
+				<div class="widget">
+										
+					<div class="widget-header">
+						<i class="icon-signal"></i>
+						<h3>个人相册</h3>
+					</div> <!-- /widget-header -->
+														
+					<div class="widget-content">					
+						<div>
+							<img src="../img/headshot.png" />
+							<img src="../img/headshot.png" />
+							<img src="../img/headshot.png" />
+							<img src="../img/headshot.png" />
+							
+						</div> <!-- /bar-chart -->				
+					</div> <!-- /widget-content -->
+					
+				</div> <!-- /widget -->
+					
+				<div class="row">
+					
+					<div class="span5">
+									
+						<div class="widget">
+							
+							<div class="widget-header">
+								<h3>个性签名</h3>
+							</div> <!-- /widget-header -->
+																
+							<div class="widget-content">
+								<p>没有人知道失败和成功间的差距是多么得小。它们之间只相差了一个词的距离，那就是胆怯。问一问福特，问一问爱迪生，问一问所有已经获得成功的人，他们会告诉你，把失败从成功中分割开的裂沟是多么得狭窄，也会明确地告诉你，依靠坚持和信念必然可以让人从失败走向成功。</p>
+							</div> <!-- /widget-content -->
+							
+						</div> <!-- /widget -->
+						
+					</div> <!-- /span5 -->
+		
+					<div class="span4">
+						
+						<div class="widget">
+							
+							<div class="widget-header">
+								<h3>备忘录</h3>
+							</div> <!-- /widget-header -->
+																
+							<div class="widget-content">
+								<p>2019.3.9提交发现杯材料！</p>
+							</div> <!-- /widget-content -->
+							
+							
+						</div> <!-- /widget -->
+					</div> <!-- /span4 -->
+					
+				</div> <!-- /row -->
+				
+			</div> <!-- /span9 -->
+			
+			
+		</div> <!-- /row -->
+		
+	</div> <!-- /container -->
+	
+</div> <!-- /content -->
+					
+	
+<div id="footer">
+	
+	<div class="container">				
+		<hr />
+		<p>&copy; 2019 拾荒网</p>
+	</div> <!-- /container -->
+	
+</div> <!-- /footer -->
+
+
+    
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../js/jquery-1.7.2.min.js"></script>
+<script src="../js/excanvas.min.js"></script>
+<script src="../js/jquery.flot.js"></script>
+<script src="../js/jquery.flot.pie.js"></script>
+<script src="../js/jquery.flot.orderBars.js"></script>
+<script src="../js/jquery.flot.resize.js"></script>
+
+
+<script src="../js/bootstrap.js"></script>
+<script src="../js/charts/bar.js"></script>
+
+  </body>
 </html>
-
-<script src="../js/user_login_jump.js"></script>

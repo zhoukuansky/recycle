@@ -1,0 +1,244 @@
+
+/*------------------------------------------------------------------
+
+[FAQ Page]
+
+	Project:		Bootstrap Landing Template
+	Version:		1.0
+	Last change:	04/26/2012
+	Assigned to:	Rod Howard (rh)
+	
+
+-------------------------------------------------------------------*/
+
+
+
+
+.faq-search {
+	margin-bottom: 2em;
+	
+	text-align: right;
+}
+
+.faq-search input {
+	width: 96%;
+	display: block;
+	padding: 2%;
+}
+
+
+
+.faq-empty {
+	display: none;
+}
+
+
+
+.faq-toc {
+	padding: 1.5em 0;
+	margin: 2em 0 0;
+	
+	border: 1px dotted #CCC;
+	border-right: none;
+	border-left: none;
+}
+
+.faq-toc ol {
+	padding: 0;
+	margin: 0;
+}
+
+.faq-toc li {
+	margin-bottom: .75em;
+	
+	list-style: none;
+}
+
+.faq-toc a {
+	margin-left: .5em;
+}
+
+
+
+.faq-list {
+	padding: 0;
+	margin: 3em 0 0;
+	
+	list-style: none;	
+}
+
+.faq-list li {
+	display: table;
+	margin-bottom: 2em;
+}
+
+.faq-icon {
+	display: table-cell;
+	padding-right: 1.25em;
+	vertical-align: top;
+}
+
+.faq-text {
+	display: table-cell;
+	vertical-align: top;
+	
+}
+
+
+.faq-number {
+	width: 32px;
+	height: 32px;
+	
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	line-height: 32px;
+	color: #FFF;
+	
+	background: #F90;
+	
+	border: 3px solid #FFF;
+	
+	box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+	
+	border-radius: 100px;
+	
+	text-shadow: 1px 1px 2px rgba(0,0,0,.4);
+}
+
+.form {
+    position: relative;
+    width: 305px;
+    margin: 0 auto;
+    text-align: center;
+}
+.fp_type{
+	width: 300px;
+    height: 42px;
+    margin-top: 25px;
+    padding: 0 15px;
+    background: #2d2d2d; /* browsers that don't support rgba */
+    background: rgba(45,45,45,.15);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #3d3d3d; /* browsers that don't support rgba */
+    border: 1px solid rgba(255,255,255,.15);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+input {
+    width: 270px;
+    height: 42px;
+    margin-top: 25px;
+    padding: 0 15px;
+    background: #2d2d2d; /* browsers that don't support rgba */
+    background: rgba(45,45,45,.15);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #3d3d3d; /* browsers that don't support rgba */
+    border: 1px solid rgba(255,255,255,.15);
+    -moz-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.1) inset;
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+input:-moz-placeholder { color: #fff; }
+input:-ms-input-placeholder { color: #fff; }
+input::-webkit-input-placeholder { color: #fff; }
+
+input:focus {
+    outline: none;
+    -moz-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 2px 3px 0 rgba(0,0,0,.1) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+button {
+    cursor: pointer;
+    width: 300px;
+    height: 44px;
+    margin-top: 25px;
+    padding: 0;
+    background: #ef4300;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #ff730e;
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.25) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+}
+
+button:hover {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+
+button:active {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:        
+        0 5px 8px 0 rgba(0,0,0,.1) inset,
+        0 1px 4px 0 rgba(0,0,0,.1);
+
+    border: 0px solid #ef4300;
+}
+
+
+
+.btn-support-ask {
+		display: block; font-size: 22px; padding: 14px 0; font-weight: 600; margin-bottom: .75em;
+	}
+	
+	.btn-support-contact {
+		display: block; padding: 12px 0; font-size: 18px; font-weight: 600;
+	}
