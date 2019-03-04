@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>用户订单管理</title>
+    <title>回收站订单管理</title>
 
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/user_order_manage.css">
+    <link rel="stylesheet" href="../css/feipin_order_manage.css">
 
     <script src="../assets/jquery/jquery-3.3.1.min.js"></script>
     <script src="../assets/vue/vue.min.js"></script>
@@ -20,7 +20,7 @@
 <div class="header clearfix">
     <a href="admin.html">
         <span class="glyphicon glyphicon-home"></span>
-        <span>用户订单管理</span>
+        <span>回收站订单管理</span>
     </a>
     <ul class="ul_right" id="ul_right">
     	<li>
@@ -40,12 +40,6 @@
 <div class="nav clearfix">
     <ul>
         <li>
-            <a href="user_order_cre.html" name="aa">
-                <span class="glyphicon glyphicon-fire icon"></span>
-                <span>新建订单</span>
-            </a>
-        </li>
-        <li>
             <a href="admin.html?idid=1" name="aa">
                 <span class="glyphicon glyphicon-leaf icon"></span>
                 <span>查询所有订单</span>
@@ -60,7 +54,7 @@
         <li>
             <a href="admin.html?idid=4" name="aa">
                 <span class="glyphicon glyphicon-tint icon"></span>
-                <span>订单评分</span>
+                <span>订单处理</span>
             </a>
         </li>
     </ul>
@@ -74,12 +68,11 @@
             <span class="glyphicon glyphicon-flash"></span>
         </div>
         <div class="caozuo" id="caozuo">
-            <button class="btn btn-primary btn_caozuo">查询所有订单</button>
-            <button v-if="idid!=0&&idid!=1" class="btn btn-success btn_caozuo" onclick="addrecords(0)"><a href="user_order_cre.html" style="color: white;">新建订单</a></button>
+            <button class="btn btn-primary btn_caozuo">查询所有订单</button>     
             <button v-if="idid!=0&&idid!=1" class="btn btn-danger btn_caozuo" value="-1" onclick="getId(this)"
                     data-toggle="modal" data-target="#myModal">删除订单
             </button>
-            <button v-if="idid==0||idid==1||idid==2" class="btn btn-info btn_caozuo" onclick="typeManage()">订单评分
+            <button v-if="idid==0||idid==1||idid==2" class="btn btn-info btn_caozuo" onclick="typeManage()">订单处理
             </button>
             
         </div>
