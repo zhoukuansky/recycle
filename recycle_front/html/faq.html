@@ -197,18 +197,9 @@
 														
 					<div class="widget-content" style="background-color:#D6E9C6">						
 						<div class="form">
-                <td>
-                    <select class="fp_type">
-                        <option value="0" selected="">废品类型</option>
-                        <option value="1">废塑料</option>
-                        <option value="2">废纸</option>
-                        <option value="3">废金属</option>
-                        <option value="4">废旧家具</option>
-                        <option value="5">废橡胶</option>
-                        <option value="6">废旧电子设备</option>
-                        <option value="7">废旧纺织品</option>
-                        <option value="8">废鞋</option>
-                        <option value="9">其他</option>
+                <td id="rubbishType">
+                    <select class="fp_type" v-model="selected">
+                        <option v-for="item in items" v-bind:value="item.id">{{item.rubbis_type}}</option>
                     </select>
                 </td>
                 <input type="text" name="weight" class="weight" placeholder="重量（kg）" style="color: black;">
@@ -270,3 +261,4 @@ $(function () {
 
   </body>
 </html>
+<script src="../ourJS/faq.js"></script>
