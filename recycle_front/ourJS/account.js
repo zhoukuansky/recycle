@@ -1,12 +1,14 @@
 var token = getCookie('token')
 
 var personVue = new Vue({
-	el:'#edit-profile',
+	el: '#edit-profile',
 	data: {
 		tel: "",
 		address: "",
 		email: "",
 		name: "",
+		pass: "",
+		passC: ""
 	}
 })
 
@@ -36,4 +38,29 @@ $.ajax({
 	error: function(res) {
 		console.log(res);
 	}
+})
+
+$('#lll').click(function() {
+	var pass = personVue.pass
+	console.log(pass)
+	$.ajax({
+		type: "POST",
+		url: url + "/loginAndRegister/updatePassword",
+		async: true,
+		data: {
+			password: pass
+		},
+		headers: {
+			token: token
+		},
+		success: function(res) {
+			if(res.status == 0) {
+				alert("成功")
+			}
+			if(res.status == 402) {
+				alert("token过期，请重新登录");
+//				window.location.href = "login.html";
+			}
+		}
+	});
 })
