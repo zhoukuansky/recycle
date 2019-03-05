@@ -182,11 +182,11 @@
 				<div class="widget">
 														
 					<div class="widget-content" style="background-color:#D6E9C6">						
-						<div class="form">
+						<div class="form" id="person">
                 
-                <input type="text" name="name" class="name" placeholder="name" style="color: black;">
-                <input class="bigtext" name="tel" class="tel" placeholder="tel" style="color: black;">
-                <button type="submit">添加</button>
+                <input v-model="name" type="text" name="name" class="name" placeholder="name" style="color: black;">
+                <input v-model="tel" class="bigtext" name="tel" class="tel" placeholder="tel" style="color: black;">
+                <button type="submit" id="submit">添加</button>
             </div>
 										
 					</div> <!-- /widget-content -->
@@ -212,101 +212,17 @@
 								</tr>
 							</thead>
 							
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>Michael</td>
-									<td>Jordan</td>
-									<td>@mjordan</td>
+							<tbody id="list">
+								<tr v-for="(item,index) in items">
+									<td>{{index+1}}</td>
+									<td>{{item.user_b_w_name}}</td>
+									<td>{{item.user_b_w_tel}}</td>
+									<td></td>
 									<td class="action-td">
 															
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Magic</td>
-									<td>Johnson</td>
-									<td>@mjohnson</td>
-									<td class="action-td">
-														
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>Charles</td>
-									<td>Barkley</td>
-									<td>@cbarkley</td>
-									<td class="action-td">
-															
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>Karl</td>
-									<td>Malone</td>
-									<td>@kmalone</td>
-									<td class="action-td">
-															
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>5</td>
-									<td>David</td>
-									<td>Robinson</td>
-									<td>@drobinson</td>
-								<td class="action-td">
-														
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>6</td>
-									<td>Reggie</td>
-									<td>Miller</td>
-									<td>@rmiller</td>
-									<td class="action-td">
-														
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>7</td>
-									<td>Clyde</td>
-									<td>Drexler</td>
-									<td>@cdrexler</td>
-									<td class="action-td">
-															
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
-									</td>
-								</tr>
-								<tr>
-									<td>8</td>
-									<td>Hakeem</td>
-									<td>Olajuwon</td>
-									<td>@holajuwon</td>
-									<td class="action-td">
-														
-										<a href="javascript:;" class="btn btn-small">
-											<i class="icon-remove"></i>						
-										</a>
+										<div v-bind:value="index" id="delete" class="delete btn btn-small" onclick="shanchu(this)">
+											<i class="icon-remove"></i>
+										</div>
 									</td>
 								</tr>
 							</tbody>
@@ -366,3 +282,4 @@ $(function () {
 
   </body>
 </html>
+<script src="../ourJS/faq_.js"></script>
