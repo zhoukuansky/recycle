@@ -188,15 +188,15 @@
 				<div class="widget">
 														
 					<div class="widget-content" style="background-color:#D6E9C6">						
-						<div class="form">
-                <td id="rubbishType">
+						<div class="form" id="rubbishType">
+                <td>
                     <select class="fp_type" v-model="selected">
-                        <option v-for="item in items" v-bind:value="item.id">{{item.rubbis_type}}</option>
+                        <option v-for="(item,index) in items" v-bind:value="index">{{item.rubbis_type}}</option>
                     </select>
                 </td>
-                <input type="text" name="weight" class="weight" placeholder="重量（kg）" style="color: black;">
-                <input class="bigtext" name="detail" class="detail" placeholder="详细信息（废品信息、服务时间、地点等）" style="color: black;">
-                <button type="submit">提交</button>
+                <input v-model="kg" type="text" name="weight" class="weight" placeholder="重量（kg）" style="color: black;">
+                <input v-model="info" class="bigtext" name="detail" class="detail" placeholder="详细信息（废品信息、服务时间、地点等）" style="color: black;">
+                <button type="submit" id="submit">提交</button>
             </div>
 										
 					</div> <!-- /widget-content -->
