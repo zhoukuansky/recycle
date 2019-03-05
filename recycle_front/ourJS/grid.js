@@ -26,7 +26,7 @@ $.ajax({
 		if(res.status == 0) {
 			//alert(getCookie("token"))
 			personVue.id = res.data.id;
-			personVue.address = res.data.address;
+			personVue.address = res.data.adress;
 			personVue.tel = res.data.tel;
 			personVue.email = res.data.email;
 			personVue.name = res.data.name;
