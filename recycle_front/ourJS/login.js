@@ -43,7 +43,7 @@ $("#submit").click(function () {
                         setCookie("token",res.data.token);
                         //alert(getCookie("token"))
                         if(res.data.type==1){
-                            window.location.href = "fepin_login_jump.html";
+                            window.location.href = "feipin_login_jump.html";
                         }
                         if(res.data.type==2){
                             window.location.href = "user_login_jump.html";
