@@ -26,4 +26,6 @@ public interface user_creMapper {
     List<user_cre> findAll();
 
     user_cre findUserInformation(Integer id);
+
+    void updatePassword(String password, int id);
 }

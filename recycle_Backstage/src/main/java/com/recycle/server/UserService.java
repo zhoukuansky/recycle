@@ -171,4 +171,12 @@ public class UserService {
         }
         return findUserInformation(id, 2);
     }
+
+    public void updatePassword(String password, int id) {
+        try {
+            userCreMapper.updatePassword(password,id);
+        } catch (Exception e) {
+            throw new DescribeException(ExceptionEnum.UPDATE_PASSWORD_ERROR);
+        }
+    }
 }

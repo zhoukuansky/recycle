@@ -3,6 +3,7 @@ package com.recycle.controller;
 import com.recycle.aop.SystemControllerLog;
 import com.recycle.exception.ExceptionHandle;
 import com.recycle.exception.ResultUtil;
+import com.recycle.jjwtToken.CurrentUser;
 import com.recycle.model.Result;
 import com.recycle.server.UserService;
 import io.swagger.annotations.Api;
@@ -57,6 +58,25 @@ public class LoginAndRegisterController {
         try {
             Map loginMap = service.login(tel, password, type);
             result = ResultUtil.success(loginMap);
+        } catch (Exception e) {
+            result = handle.exceptionGet(e);
+            //result = ResultUtil.error(ExceptionEnum.USER_EXIST);
+        }
+        return result;
+    }
+
+    @PostMapping("/updatePassword")
+    @SystemControllerLog(logAction = "updatePassword", logContent = "修改密码")
+    @ApiOperation(value = "修改密码", notes = "修改密码")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "String"),
+    })
+    public Result updatePassword(@RequestParam("password") String password,  @CurrentUser String[] tokenData) {
+        Result result = ResultUtil.success();
+        int id = Integer.parseInt(tokenData[1]);
+        try {
+            service.updatePassword(password, id);
+            result = ResultUtil.success();
         } catch (Exception e) {
             result = handle.exceptionGet(e);
             //result = ResultUtil.error(ExceptionEnum.USER_EXIST);

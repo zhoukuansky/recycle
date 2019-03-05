@@ -7,6 +7,7 @@ public enum ExceptionEnum {
     USER_EXIST(4, "用户已经存在"),
     ILLEGAL_ARGUMENT(5, "角色异常"),
     UPDATE_ERROR(11, "更新用户信息失败"),
+    UPDATE_PASSWORD_ERROR(12, "更新用户密码失败"),
     NEED_LOGIN(400, "没有token，请登陆后操作"),
     METHOD_FAILED(401, "请求方法错误，请尝试其他请求方法"),
     TOKEN_OUTTIME(402, "token过期"),
