@@ -26,4 +26,6 @@ public interface user_buyMapper {
     List<user_buy> findAll();
 
     user_buy findUserInformation(Integer id);
+
+    void updatePassword(String password, int id);
 }

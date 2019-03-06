@@ -122,4 +122,9 @@
       email = #{email,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+    <update id="updatePassword" parameterType="java.util.Map">
+    update user_buy
+    set password = md5(#{password,jdbcType=VARCHAR})
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>

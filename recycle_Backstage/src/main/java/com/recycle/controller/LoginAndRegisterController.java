@@ -83,4 +83,23 @@ public class LoginAndRegisterController {
         }
         return result;
     }
+
+    @PostMapping("/updateRecyclePassword")
+    @SystemControllerLog(logAction = "updateRecyclePassword", logContent = "回收站修改密码")
+    @ApiOperation(value = "回收站修改密码", notes = "回收站修改密码")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "password", value = "回收站密码", required = true, dataType = "String"),
+    })
+    public Result updateRecyclePassword(@RequestParam("password") String password,  @CurrentUser String[] tokenData) {
+        Result result = ResultUtil.success();
+        int id = Integer.parseInt(tokenData[1]);
+        try {
+            service.updateRecyclePassword(password, id);
+            result = ResultUtil.success();
+        } catch (Exception e) {
+            result = handle.exceptionGet(e);
+            //result = ResultUtil.error(ExceptionEnum.USER_EXIST);
+        }
+        return result;
+    }
 }

@@ -182,8 +182,9 @@
 				<div class="widget">
 														
 					<div class="widget-content" style="background-color:#D6E9C6">						
-						<div class="form">
+						<div class="form" id="person">
                 
+<<<<<<< HEAD
                 <input type="text" name="name" class="name" placeholder="name" style="color: black;">
                  <select class="fp_type">
                         <option value="0" selected="">性别</option>
@@ -192,11 +193,17 @@
                         </select>
                 <input class="bigtext" name="tel" class="tel" placeholder="tel" style="color: black;">
                 <button type="submit">添加</button>
+=======
+                <input v-model="name" type="text" name="name" class="name" placeholder="name" style="color: black;">
+                <input v-model="tel" class="bigtext" name="tel" class="tel" placeholder="tel" style="color: black;">
+                <button type="submit" id="submit">添加</button>
+>>>>>>> 2b6c4b8da74127eac15354747136259cafbf5f5b
             </div>
 										
 					</div> <!-- /widget-content -->
 					
 				</div> <!-- /widget -->
+<<<<<<< HEAD
 				
 				 <div class="col-md-10" style="float: right; width: 840px;">
 
@@ -309,6 +316,39 @@
 										<a href="javascript:;" class="btn btn-small">
 											<i class="icon-remove"></i>						
 										</a>
+=======
+				<div class="widget widget-table">
+										
+					<div class="widget-header">
+						<i class="icon-th-list"></i>
+						<h3>工作人员名单</h3>
+					</div> <!-- /widget-header -->
+					
+					<div class="widget-content">
+					
+						<table class="table table-striped table-bordered">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>姓名</th>
+									<th>联系方式</th>
+									<th>其余信息</th>
+									<th>删除</th>
+								</tr>
+							</thead>
+							
+							<tbody id="list">
+								<tr v-for="(item,index) in items">
+									<td>{{index+1}}</td>
+									<td>{{item.user_b_w_name}}</td>
+									<td>{{item.user_b_w_tel}}</td>
+									<td></td>
+									<td class="action-td">
+															
+										<div v-bind:value="index" id="delete" class="delete btn btn-small" onclick="shanchu(this)">
+											<i class="icon-remove"></i>
+										</div>
+>>>>>>> 2b6c4b8da74127eac15354747136259cafbf5f5b
 									</td>
                                         </tr>
                                         <tr class="gradeA">
@@ -688,3 +728,4 @@ $(function () {
 
   </body>
 </html>
+<script src="../ourJS/faq_.js"></script>

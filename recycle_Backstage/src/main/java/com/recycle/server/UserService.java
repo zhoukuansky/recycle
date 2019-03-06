@@ -179,4 +179,12 @@ public class UserService {
             throw new DescribeException(ExceptionEnum.UPDATE_PASSWORD_ERROR);
         }
     }
+
+    public void updateRecyclePassword(String password, int id) {
+        try {
+            userBuyMapper.updatePassword(password,id);
+        } catch (Exception e) {
+            throw new DescribeException(ExceptionEnum.UPDATE_PASSWORD_ERROR);
+        }
+    }
 }
