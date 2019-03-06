@@ -36,10 +36,10 @@ public class OrdersService {
         return new PageResultBean<orders>(mapper.findNewOrders());
     }
 
-    public Object findUserAllOrders(int user_c_id, Integer pageNum, Integer pageSize) {
+    public Object findUserAllOrders(int user_c_id, Integer pageNum, Integer pageSize,int status) {
         Sort sort = new Sort(Sort.Direction.ASC, "Id");
         PageHelper.startPage(pageNum, pageSize, "id ASC");
-        return new PageResultBean<orders>(mapper.findUserAll(user_c_id));
+        return new PageResultBean<orders>(mapper.findUserAll(user_c_id,status));
     }
 
     public Object dealOrders(int id, int user_b_id) throws Exception {
@@ -56,16 +56,16 @@ public class OrdersService {
         return mapper.selectByPrimaryKey(id);
     }
 
-    public Object findRecycleAllOrders(int user_b_id, Integer pageNum, Integer pageSize) {
+    public Object findRecycleAllOrders(int user_b_id, Integer pageNum, Integer pageSize,int status) {
         Sort sort = new Sort(Sort.Direction.ASC, "Id");
         PageHelper.startPage(pageNum, pageSize, "id ASC");
-        return new PageResultBean<orders>(mapper.findRecycleAll(user_b_id));
+        return new PageResultBean<orders>(mapper.findRecycleAll(user_b_id,status));
     }
 
-    public Object findAllOrders(Integer pageNum, Integer pageSize) {
+    public Object findAllOrders(Integer pageNum, Integer pageSize,int status) {
         Sort sort = new Sort(Sort.Direction.ASC, "Id");
         PageHelper.startPage(pageNum, pageSize, "id ASC");
-        return new PageResultBean<orders>(mapper.findAllOrders());
+        return new PageResultBean<orders>(mapper.findAllOrders(status));
     }
 
     public Object finishOrders(int id) throws Exception {

@@ -44,6 +44,7 @@ $.ajax({
 })
 
 $('#submit').click(function () {
+    console.log(personVue.name)
     if (personVue.name != "" && personVue.tel != "") {
         $.ajax({
             url: url + "/recycleWorker/insertRecycleWorker",
@@ -77,16 +78,18 @@ $('#submit').click(function () {
 function shanchu(e){
     var index=$(e).attr("value");
     //console.log(index);
-    console.log(listVue.items[index].id);
+    //console.log(listVue.items[index].id);
     $.ajax({
-        url: url + "/recycleWorker/deleteWorker",
+        url: url + "/recycleWorker/deleteWorker?id="+listVue.items[index].id,
+        //url: url + "/recycleWorker/deleteWorker",
         type: "DELETE",
         dataType: "json",
         data: {
             id:listVue.items[index].id,
         },
+        contentType:"application/x-www-form-urlencoded",
         headers: {
-            token: token
+            token: token,
         },
         success: function (res) {
             if (res.status == 0) {

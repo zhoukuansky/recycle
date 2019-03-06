@@ -33,18 +33,21 @@
         select
         *
         from orders
+        where status =#{status,jdbcType=INTEGER}
     </select>
     <select id="findUserAll" parameterType="java.util.Map" resultMap="BaseResultMap">
         select
         *
         from orders
         where user_c_id = #{user_c_id,jdbcType=INTEGER}
+        and status =#{status,jdbcType=INTEGER}
     </select>
     <select id="findRecycleAll" parameterType="java.util.Map" resultMap="BaseResultMap">
         select
         *
         from orders
         where user_b_id = #{user_b_id,jdbcType=INTEGER}
+        and status =#{status,jdbcType=INTEGER}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from orders

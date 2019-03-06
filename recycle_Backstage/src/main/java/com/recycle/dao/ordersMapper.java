@@ -22,9 +22,9 @@ public interface ordersMapper {
 
     List<orders> findNewOrders();
 
-    List<orders> findUserAll(int user_c_id);
+    List<orders> findUserAll(int user_c_id,int status);
 
-    List<orders> findRecycleAll(int user_b_id);
+    List<orders> findRecycleAll(int user_b_id,int status);
 
-    List<orders> findAllOrders();
+    List<orders> findAllOrders(int status);
 }
