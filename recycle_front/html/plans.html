@@ -177,11 +177,11 @@
 							</div>
 							<!-- /widget-header -->
 
-							<div class="widget-content" id="list">
+							<div class="widget-content">
 
 								<div class="pricing-plans plans-3">
 
-									<div class="plan-container" v-for="(item,index) in orderList">
+									<div class="plan-container" v-for="(item,index) in orderList1">
 										<div class="plan">
 											<div class="plan-header">
 
@@ -889,15 +889,21 @@
 										</table>
 									</div>
 									  <div class="pages" id="pages" style="margin-bottom: 100px;">
-            <div class="totalElements">共有{{totalElements}}个记录</div>
+            <div class="totalElements">共有<!--{{totalElements}}-->个记录</div>
             <div class="btn_pages">
-                <button class="btn btn-primary btn-page" onclick="firstPage()">首页</button>
-                <button class="btn btn-primary btn-page" onclick="subPage()">上一页</button>
-                <button class="btn btn-primary btn-page" onclick="addPage()">下一页</button>
-                <button class="btn btn-primary btn-page" onclick="lastPage()">尾页</button>
+                <!--<button class="btn btn-primary btn-page" onclick="firstPage()">首页</button>-->
+                <!--<button class="btn btn-primary btn-page" onclick="subPage()">上一页</button>-->
+                <!--<button class="btn btn-primary btn-page" onclick="addPage()">下一页</button>-->
+                <!--<button class="btn btn-primary btn-page" onclick="lastPage()">尾页</button>-->
+                <button class="btn btn-primary btn-page" >首页</button>
+                <button class="btn btn-primary btn-page" >上一页</button>
+                <button class="btn btn-primary btn-page">下一页</button>
+                <button class="btn btn-primary btn-page">尾页</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="text" class="form-control" v-model="nowPage">/{{allPages}}页
-                <button class="btn btn-primary btn-page" onclick="skipPage()" style="background-color: #1CAFFC;">跳转</button>
+                <!--<input type="text" class="form-control" v-model="nowPage">/{{allPages}}页
+                <button class="btn btn-primary btn-page" onclick="skipPage()" style="background-color: #1CAFFC;">跳转</button>-->
+                <input type="text" class="form-control">/2页
+                <button class="btn btn-primary btn-page"style="background-color: #1CAFFC;">跳转</button>
             </div>
         </div>
 								</div>
