@@ -21,21 +21,21 @@ import java.util.Map;
 
 @Service
 public class UserService {
-            @Autowired
-            private user_buyMapper userBuyMapper;
-            @Autowired
-            private user_creMapper userCreMapper;
-            @Autowired
-            private user_supMapper useSuprMapper;
-            @Autowired
-            private user_buy_workerMapper workerMapper;
+    @Autowired
+    private user_buyMapper userBuyMapper;
+    @Autowired
+    private user_creMapper userCreMapper;
+    @Autowired
+    private user_supMapper useSuprMapper;
+    @Autowired
+    private user_buy_workerMapper workerMapper;
 
-            //注册用户
-            public Map insertUser(String tel, String password, int type) throws Exception {
-                Map insertMap = new HashMap();
-                //password=DigestUtils.md5DigestAsHex(password.getBytes());
-                user_buy table1 = userBuyMapper.findByTel(tel);
-                user_cre table2 = userCreMapper.findByTel(tel);
+    //注册用户
+    public Map insertUser(String tel, String password, int type) throws Exception {
+        Map insertMap = new HashMap();
+        //password=DigestUtils.md5DigestAsHex(password.getBytes());
+        user_buy table1 = userBuyMapper.findByTel(tel);
+        user_cre table2 = userCreMapper.findByTel(tel);
         user_sup table3 = useSuprMapper.findByTel(tel);
         if (table1 != null || table2 != null || table3 != null) {
             throw new DescribeException(ExceptionEnum.USER_EXIST);
@@ -174,7 +174,7 @@ public class UserService {
 
     public void updatePassword(String password, int id) {
         try {
-            userCreMapper.updatePassword(password,id);
+            userCreMapper.updatePassword(password, id);
         } catch (Exception e) {
             throw new DescribeException(ExceptionEnum.UPDATE_PASSWORD_ERROR);
         }
@@ -182,7 +182,7 @@ public class UserService {
 
     public void updateRecyclePassword(String password, int id) {
         try {
-            userBuyMapper.updatePassword(password,id);
+            userBuyMapper.updatePassword(password, id);
         } catch (Exception e) {
             throw new DescribeException(ExceptionEnum.UPDATE_PASSWORD_ERROR);
         }

@@ -71,7 +71,7 @@ public class LoginAndRegisterController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "String"),
     })
-    public Result updatePassword(@RequestParam("password") String password,  @CurrentUser String[] tokenData) {
+    public Result updatePassword(@RequestParam("password") String password, @CurrentUser String[] tokenData) {
         Result result = ResultUtil.success();
         int id = Integer.parseInt(tokenData[1]);
         try {
@@ -90,7 +90,7 @@ public class LoginAndRegisterController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "password", value = "回收站密码", required = true, dataType = "String"),
     })
-    public Result updateRecyclePassword(@RequestParam("password") String password,  @CurrentUser String[] tokenData) {
+    public Result updateRecyclePassword(@RequestParam("password") String password, @CurrentUser String[] tokenData) {
         Result result = ResultUtil.success();
         int id = Integer.parseInt(tokenData[1]);
         try {

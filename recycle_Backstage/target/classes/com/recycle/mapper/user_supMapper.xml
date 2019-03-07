@@ -42,7 +42,7 @@
     delete from user_sup
     where id = #{id,jdbcType=INTEGER}
   </delete>
-    <insert id="insert" parameterType="com.recycle.model.user_sup">
+    <insert id="insert" parameterType="java.util.Map">
     insert into user_sup (tel, password
       )
     values ( #{tel,jdbcType=VARCHAR},md5(#{password,jdbcType=VARCHAR})

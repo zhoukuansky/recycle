@@ -31,15 +31,21 @@ public class OrdersService {
     }
 
     public Object findNewOrders(Integer pageNum, Integer pageSize) {
-        Sort sort = new Sort(Sort.Direction.ASC, "Id");
-        PageHelper.startPage(pageNum, pageSize, "id ASC");
+        Sort sort = new Sort(Sort.Direction.DESC, "order_time_begin");
+        PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
         return new PageResultBean<orders>(mapper.findNewOrders());
     }
 
-    public Object findUserAllOrders(int user_c_id, Integer pageNum, Integer pageSize,int status) {
+    public Object findUserAllOrders(int user_c_id, Integer pageNum, Integer pageSize, int status) {
         Sort sort = new Sort(Sort.Direction.ASC, "Id");
-        PageHelper.startPage(pageNum, pageSize, "id ASC");
-        return new PageResultBean<orders>(mapper.findUserAll(user_c_id,status));
+        if (status == 1) {
+            PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
+        } else if (status == 2) {
+            PageHelper.startPage(pageNum, pageSize, "order_time_deal DESC");
+        } else {
+            PageHelper.startPage(pageNum, pageSize, "order_time_finish DESC");
+        }
+        return new PageResultBean<orders>(mapper.findUserAll(user_c_id, status));
     }
 
     public Object dealOrders(int id, int user_b_id) throws Exception {
@@ -52,19 +58,34 @@ public class OrdersService {
         order.setUser_b_id(user_b_id);
         order.setStatus(2);
         order.setOrder_time_deal(new Date());
+        //order.setOrder_time_finish(null);
+        System.out.println(order.getOrder_time_finish());
+        System.out.println(order.getOrder_time_deal());
         mapper.updateByPrimaryKeySelective(order);
         return mapper.selectByPrimaryKey(id);
     }
 
-    public Object findRecycleAllOrders(int user_b_id, Integer pageNum, Integer pageSize,int status) {
+    public Object findRecycleAllOrders(int user_b_id, Integer pageNum, Integer pageSize, int status) {
         Sort sort = new Sort(Sort.Direction.ASC, "Id");
-        PageHelper.startPage(pageNum, pageSize, "id ASC");
-        return new PageResultBean<orders>(mapper.findRecycleAll(user_b_id,status));
+        if (status == 1) {
+            PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
+        } else if (status == 2) {
+            PageHelper.startPage(pageNum, pageSize, "order_time_deal DESC");
+        } else {
+            PageHelper.startPage(pageNum, pageSize, "order_time_finish DESC");
+        }
+        return new PageResultBean<orders>(mapper.findRecycleAll(user_b_id, status));
     }
 
-    public Object findAllOrders(Integer pageNum, Integer pageSize,int status) {
+    public Object findAllOrders(Integer pageNum, Integer pageSize, int status) {
         Sort sort = new Sort(Sort.Direction.ASC, "Id");
-        PageHelper.startPage(pageNum, pageSize, "id ASC");
+        if (status == 1) {
+            PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
+        } else if (status == 2) {
+            PageHelper.startPage(pageNum, pageSize, "order_time_deal DESC");
+        } else {
+            PageHelper.startPage(pageNum, pageSize, "order_time_finish DESC");
+        }
         return new PageResultBean<orders>(mapper.findAllOrders(status));
     }
 

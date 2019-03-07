@@ -80,15 +80,15 @@ public class OrdersController {
             @ApiImplicitParam(name = "pageSize", value = "页面大小", required = false, dataType = "String"),
             @ApiImplicitParam(name = "status", value = "需要查询的状态", required = true, dataType = "int"),
     })
-    public Result userFindOrdersList(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum, @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize,@RequestParam("status") int status, @CurrentUser String[] tokenData) throws Exception {
+    public Result userFindOrdersList(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum, @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize, @RequestParam("status") int status, @CurrentUser String[] tokenData) throws Exception {
         Result result = ResultUtil.success();
         int type = Integer.parseInt(tokenData[0]);
-        if (type!=2) {
+        if (type != 2) {
             throw new DescribeException(ExceptionEnum.NEED_ROLES);
         }
         int user_c_id = Integer.parseInt(tokenData[1]);
         try {
-            result = ResultUtil.success(service.findUserAllOrders(user_c_id, pageNum, pageSize,status));
+            result = ResultUtil.success(service.findUserAllOrders(user_c_id, pageNum, pageSize, status));
         } catch (Exception e) {
             result = handle.exceptionGet(e);
             //result = ResultUtil.error(ExceptionEnum.USER_EXIST);
@@ -126,7 +126,7 @@ public class OrdersController {
             @ApiImplicitParam(name = "pageSize", value = "页面大小", required = false, dataType = "String"),
             @ApiImplicitParam(name = "status", value = "需要查询的状态", required = true, dataType = "int"),
     })
-    public Result recycleFindOrdersList(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum, @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize,@RequestParam("status") int status,  @CurrentUser String[] tokenData) throws Exception {
+    public Result recycleFindOrdersList(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum, @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize, @RequestParam("status") int status, @CurrentUser String[] tokenData) throws Exception {
         Result result = ResultUtil.success();
         int type = Integer.parseInt(tokenData[0]);
         if (type != 1) {
@@ -134,7 +134,7 @@ public class OrdersController {
         }
         int user_b_id = Integer.parseInt(tokenData[1]);
         try {
-            result = ResultUtil.success(service.findRecycleAllOrders(user_b_id, pageNum, pageSize,status));
+            result = ResultUtil.success(service.findRecycleAllOrders(user_b_id, pageNum, pageSize, status));
         } catch (Exception e) {
             result = handle.exceptionGet(e);
             //result = ResultUtil.error(ExceptionEnum.USER_EXIST);
@@ -150,7 +150,7 @@ public class OrdersController {
             @ApiImplicitParam(name = "pageSize", value = "页面大小", required = false, dataType = "String"),
             @ApiImplicitParam(name = "status", value = "需要查询的状态", required = true, dataType = "int"),
     })
-    public Result OrdersList(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum, @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize,@RequestParam("status") int status, @CurrentUser String[] tokenData) throws Exception {
+    public Result OrdersList(@RequestParam(value = "pageNum", defaultValue = "1") Integer pageNum, @RequestParam(value = "pageSize", defaultValue = "10") Integer pageSize, @RequestParam("status") int status, @CurrentUser String[] tokenData) throws Exception {
         Result result = ResultUtil.success();
         //int user_b_id = Integer.parseInt(tokenData[1]);
         int type = Integer.parseInt(tokenData[0]);
@@ -158,7 +158,7 @@ public class OrdersController {
             throw new DescribeException(ExceptionEnum.NEED_ROLES);
         }
         try {
-            result = ResultUtil.success(service.findAllOrders(pageNum, pageSize,status));
+            result = ResultUtil.success(service.findAllOrders(pageNum, pageSize, status));
         } catch (Exception e) {
             result = handle.exceptionGet(e);
             //result = ResultUtil.error(ExceptionEnum.USER_EXIST);

@@ -81,6 +81,7 @@ public class orders {
         return order_time_begin;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
     public void setOrder_time_begin(Date order_time_begin) {
         this.order_time_begin = order_time_begin;
     }
@@ -90,6 +91,7 @@ public class orders {
         return order_time_deal;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
     public void setOrder_time_deal(Date order_time_deal) {
         this.order_time_deal = order_time_deal;
     }
@@ -99,6 +101,7 @@ public class orders {
         return order_time_finish;
     }
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
     public void setOrder_time_finish(Date order_time_finish) {
         this.order_time_finish = order_time_finish;
     }
