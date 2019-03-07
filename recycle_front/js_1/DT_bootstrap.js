@@ -1,6 +1,6 @@
 /* Set the defaults for DataTables initialisation */
 $.extend( true, $.fn.dataTable.defaults, {
-	"sDom": "<'row'r>t<'row'<'col-md-6'i><'col-md-6'p>>",
+	"sDom": "<'row'r>t<'row'>",
 	"sPaginationType": "bootstrap",
 	"oLanguage": {
 		"sLengthMenu": "_MENU_ 选择列表数量"
@@ -150,7 +150,7 @@ if ( $.fn.DataTable.TableTools ) {
 /* Table initialisation */
 $(document).ready(function() {
 	$('#example').dataTable( {
-		"sDom": "<'row'r>t<'row'<'col-md-6'i><'col-md-6'p>>",
+		"sDom": "<'row'r>t<'row'>",
 		"sPaginationType": "bootstrap",
 		"oLanguage": {
 			"sLengthMenu": "_MENU_ 选择列表数量"
