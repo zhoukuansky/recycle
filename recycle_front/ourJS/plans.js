@@ -10,7 +10,6 @@ var ob = new Vue({
 		rubList: [],
 		gradeInfo: "",
 		grade: "",
-		oldgrade: "",
 	},
 	methods: {
 		getRubType: function (rub_id) {
@@ -169,7 +168,7 @@ function init() {
 							type: 1,
 						},
 						success: function (res) {
-							ob.orderList3[i].recycle = res.data.name;
+							ob.orderList3[i].recycle = res.data.tel;
 						}
 					})
 				}
@@ -230,7 +229,7 @@ function init() {
 							type: 1,
 						},
 						success: function (res) {
-							ob.orderList4[i].recycle = res.data.name;
+							ob.orderList4[i].recycle = res.data.tel;
 						}
 					})
 				}
