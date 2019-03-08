@@ -15,7 +15,7 @@
 		<script type="text/javascript" src="../assets/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../assets/mylibrary/cookie.js"></script>
 		<script type="text/javascript" src="../assets/mylibrary/urlParam.js"></script>
-		<script type="text/javascript" src="../js/common.js"></script>
+		<!-- <script type="text/javascript" src="../js/common.js"></script> -->
 	</head>
 	<body>
 	<div class="head">
@@ -24,11 +24,11 @@
 				<span class="header_title">拾荒网—做您身边的拾荒者 </span>
 				</div>
 				<div class="header_search">
-					<div class=" header_search_box">
-						<input type="text" class="header_search_box_input" />
+					<div class=" header_search_box" id="seach">
+						<input type="text" class="header_search_box_input" v-model="word" placeholder="百度搜索"/>
 					</div>
 					<div class="header_search_btn">
-						<button class=" header_search_btn_detail">
+						<button class=" header_search_btn_detail" onclick="sou()">
 							<i class=" header_search_btn_icon"></i>
 						</button>
 					  	</div>
@@ -55,7 +55,7 @@
 							</ul>
 						</div>
 						<div class=" header_nav_box_fb">
-							<a href="#" class="header_nav_box_fb_text">商家入驻</a>
+							<a href="register.html" class="header_nav_box_fb_text">商家入驻</a>
 						</div>
 					</div>
 				</div>
@@ -176,3 +176,16 @@
 	</div>	
 	</body>
 </html>
+<script>
+var appVue=new Vue({
+	el: '#seach',
+	data: {
+		word:"",
+	}
+})
+
+function sou(){
+	window.location.href = 'https://www.baidu.com/s?ie=UTF-8&wd='+appVue.word;
+}
+
+</script>
