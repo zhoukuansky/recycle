@@ -167,7 +167,7 @@
 
 						<h1 class="page-title">
 					<i class="icon-th-list"></i>
-					待评分订单列表				
+					订单列表				
 				</h1>
 
 						<div class="widget">
@@ -241,7 +241,7 @@
 
 							<div class="widget-header">
 								<i class="icon-th-list"></i>
-								<h3>其余待评分订单</h3>
+								<h3>已新建订单</h3>
 							</div>
 							<!-- /widget-header -->
 
@@ -254,9 +254,8 @@
 											<th>废品类型</th>
 											<th>重量</th>
 											<th>交易金额</th>
-											<th>评分描述</th>
-											<th>评分</th>
-											<th>提交评分</th>
+											<th>详细信息</th>
+											<th>撤销订单</th>
 										</tr>
 									</thead>
 
@@ -266,21 +265,10 @@
 											<td>{{item.rub_id}}</td>
 											<td>{{item.weight}}</td>
 											<td>{{item.order_moneny}}</td>
-											<td><input type="text" /></td>
-											<td>
-												<select class="fp_type">
-													<option value="0" selected="">分数</option>
-													<option value="1">
-														<6</option>
-															<option value="2">7</option>
-															<option value="3">8</option>
-															<option value="4">9</option>
-															<option value="5">10</option>
-												</select>
-											</td>
+											<td></td>
 											<td class="action-td">
 												<a href="javascript:;" class="btn btn-small btn-warning">
-													<i class="icon-ok" v-on:click="grading"></i>
+													<i class="icon-remove" v-on:click="grading"></i>
 												</a>
 
 											</td>
@@ -297,12 +285,42 @@
 						<div class="col-md-10" style="float: right; width: 840px;">
 							<div class="row">
 								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h1 class="page-title">
-																	<i class="icon-th-list"></i>所有订单</h1>
-									</div>
 									<div class="widget-header">
-										<h3>所有订单列表</h3>
+										<h3>正在处理的订单</h3>
+									</div>
+									<div class="bootstrap-admin-panel-content">
+										<table class="table table-striped table-bordered" id="example">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th>废品类型</th>
+													<th>重量</th>
+													<th>交易金额</th>
+													<th>状态</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="odd gradeX" v-for="(item,index) in orderList3">
+													<td>{{index+1}}</td>
+													<td>{{item.rub_id}}</td>
+													<td>{{item.weight}}</td>
+													<td class="center">{{item.order_moneny}}</td>
+													<td class="center">{{item.order_moneny}}</td>
+
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+						<div class="col-md-10" style="float: right; width: 840px; margin-bottom: 100px;">
+							<div class="row">
+								<div class="panel panel-default">
+									<div class="widget-header">
+										<h3>已完成订单</h3>
 									</div>
 									<div class="bootstrap-admin-panel-content">
 										<table class="table table-striped table-bordered" id="example">
@@ -328,24 +346,7 @@
 											</tbody>
 										</table>
 									</div>
-									  <div class="pages" id="pages" style="margin-bottom: 100px;">
-            <div class="totalElements">共有<!--{{totalElements}}-->个记录</div>
-            <div class="btn_pages">
-                <!--<button class="btn btn-primary btn-page" onclick="firstPage()">首页</button>-->
-                <!--<button class="btn btn-primary btn-page" onclick="subPage()">上一页</button>-->
-                <!--<button class="btn btn-primary btn-page" onclick="addPage()">下一页</button>-->
-                <!--<button class="btn btn-primary btn-page" onclick="lastPage()">尾页</button>-->
-                <button class="btn btn-primary btn-page" >首页</button>
-                <button class="btn btn-primary btn-page" >上一页</button>
-                <button class="btn btn-primary btn-page">下一页</button>
-                <button class="btn btn-primary btn-page">尾页</button>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <!--<input type="text" class="form-control" v-model="nowPage">/{{allPages}}页
-                <button class="btn btn-primary btn-page" onclick="skipPage()" style="background-color: #1CAFFC;">跳转</button>-->
-                <input type="text" class="form-control">/2页
-                <button class="btn btn-primary btn-page"style="background-color: #1CAFFC;">跳转</button>
-            </div>
-        </div>
+									
 								</div>
 							</div>
 						</div>
