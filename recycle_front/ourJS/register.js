@@ -1,3 +1,4 @@
+var url="http://114.115.243.22/recycle";
 var registerVue = new Vue({
     el: '#register',
     data: {

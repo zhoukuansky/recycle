@@ -23,7 +23,9 @@ public class WebSecurityConfig extends WebMvcConfigurationSupport {
                                 "/swagger-ui.html",
                                 "/swagger-resources",
                                 "/swagger-resources/**",
-                                "/webjars/**");
+                                "/webjars/**",
+                                "/recycle/**"
+                        );
         super.addInterceptors(registry);
     }
 
@@ -34,8 +36,12 @@ public class WebSecurityConfig extends WebMvcConfigurationSupport {
                 .addResourceLocations("classpath:/META-INF/resources/webjars/")
                 .addResourceLocations("classpath:/resources/")
                 .addResourceLocations("classpath:/static/")
-                .addResourceLocations("classpath:/public/");
+                .addResourceLocations("classpath:/public/")
+                .addResourceLocations("classpath:/webapp/");
         //System.out.println("*****************************");
+        registry.addResourceHandler("/recycle/**")
+//                .addResourceLocations("file:/webapps/recycle_front");
+                .addResourceLocations("file:C:/Users/HP/Desktop/recycle/recycle_front");
         super.addResourceHandlers(registry);
     }
 
