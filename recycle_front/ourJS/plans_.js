@@ -221,4 +221,3 @@ function finishOrder(e){
 }
 
 setTimeout(init,10);
-

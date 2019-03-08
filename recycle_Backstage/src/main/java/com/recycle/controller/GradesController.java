@@ -49,7 +49,7 @@ public class GradesController {
     @ApiImplicitParams({
             @ApiImplicitParam(name = "order_id", value = "order_id", required = true, dataType = "int"),
     })
-    public Result gradesInformation(@RequestParam("order_id") Integer order_id) {
+    public Result gradesInformation(@RequestParam("order_id") int order_id) {
         Result result = ResultUtil.success();
         try {
             result = ResultUtil.success(service.gradesInformation(order_id));

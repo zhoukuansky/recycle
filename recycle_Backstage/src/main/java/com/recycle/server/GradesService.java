@@ -40,7 +40,7 @@ public class GradesService {
         mapper.deleteByPrimaryKey(id);
     }
 
-    public Object gradesInformation(Integer order_id) {
+    public Object gradesInformation(int order_id) {
         return mapper.selectByOrder(order_id);
     }
 }

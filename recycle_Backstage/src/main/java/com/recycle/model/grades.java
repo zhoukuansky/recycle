@@ -1,11 +1,16 @@
 package com.recycle.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.util.Date;
+
 public class grades {
     private Integer id;
 
     private Integer grades_server;
 
-    private Integer grades_time;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date grades_time;
 
     private String grades_describ;
 
@@ -27,11 +32,13 @@ public class grades {
         this.grades_server = grades_server;
     }
 
-    public Integer getGrades_time() {
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    public Date getGrades_time() {
         return grades_time;
     }
 
-    public void setGrades_time(Integer grades_time) {
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
+    public void setGrades_time(Date grades_time) {
         this.grades_time = grades_time;
     }
 

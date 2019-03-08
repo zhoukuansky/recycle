@@ -17,5 +17,5 @@ public interface gradesMapper {
 
     int updateByPrimaryKey(grades record);
 
-    Object selectByOrder(Integer order_id);
+    Object selectByOrder(int order_id);
 }

@@ -4,7 +4,7 @@
     <resultMap id="BaseResultMap" type="com.recycle.model.grades">
         <id column="id" jdbcType="INTEGER" property="id"/>
         <result column="grades_server" jdbcType="INTEGER" property="grades_server"/>
-        <result column="grades_time" jdbcType="INTEGER" property="grades_time"/>
+        <result column="grades_time" jdbcType="TIMESTAMP" property="grades_time"/>
         <result column="grades_describ" jdbcType="VARCHAR" property="grades_describ"/>
         <result column="ord_order_id" jdbcType="INTEGER" property="ord_order_id"/>
     </resultMap>
@@ -18,8 +18,7 @@
         where id = #{id,jdbcType=INTEGER}
     </select>
     <select id="selectByOrder" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-        select
-        <include refid="Base_Column_List"/>
+        select *
         from grades
         where ord_order_id = #{order_id,jdbcType=INTEGER}
     </select>
@@ -30,7 +29,7 @@
     <insert id="insert" parameterType="com.recycle.model.grades">
     insert into grades (id, grades_server, grades_time, 
       grades_describ, ord_order_id)
-    values (#{id,jdbcType=INTEGER}, #{grades_server,jdbcType=INTEGER}, #{grades_time,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{grades_server,jdbcType=INTEGER}, #{grades_time,jdbcType=TIMESTAMP},
       #{grades_describ,jdbcType=VARCHAR}, #{ord_order_id,jdbcType=INTEGER})
   </insert>
     <insert id="insertSelective" parameterType="com.recycle.model.grades">
@@ -60,7 +59,7 @@
                 #{grades_server,jdbcType=INTEGER},
             </if>
             <if test="grades_time != null">
-                #{grades_time,jdbcType=INTEGER},
+                #{grades_time,jdbcType=TIMESTAMP},
             </if>
             <if test="grades_describ != null">
                 #{grades_describ,jdbcType=VARCHAR},
@@ -77,7 +76,7 @@
                 grades_server = #{grades_server,jdbcType=INTEGER},
             </if>
             <if test="grades_time != null">
-                grades_time = #{grades_time,jdbcType=INTEGER},
+                grades_time = #{grades_time,jdbcType=TIMESTAMP},
             </if>
             <if test="grades_describ != null">
                 grades_describ = #{grades_describ,jdbcType=VARCHAR},
@@ -91,7 +90,7 @@
     <update id="updateByPrimaryKey" parameterType="com.recycle.model.grades">
     update grades
     set grades_server = #{grades_server,jdbcType=INTEGER},
-      grades_time = #{grades_time,jdbcType=INTEGER},
+      grades_time = #{grades_time,jdbcType=TIMESTAMP},
       grades_describ = #{grades_describ,jdbcType=VARCHAR},
       ord_order_id = #{ord_order_id,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
