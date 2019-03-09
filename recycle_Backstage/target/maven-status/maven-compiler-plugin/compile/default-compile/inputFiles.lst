@@ -1,4 +1,5 @@
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\model\Result.java
+C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\server\GradesService.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\jjwtToken\WebSecurityConfig.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\model\user_buy_worker.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\model\SystemLog.java
@@ -6,6 +7,7 @@ C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\exceptio
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\server\UserService.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\dao\user_buyMapper.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\dao\rubbishMapper.java
+C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\controller\OrdersController.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\dao\user_buy_workerMapper.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\dao\user_creMapper.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\dao\gradesMapper.java
@@ -15,8 +17,10 @@ C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\jjwtToke
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\exception\ExceptionEnum.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\jjwtToken\JwtToken.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\controller\UserController.java
+C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\server\OrdersService.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\Swagger2.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\exception\ResultUtil.java
+C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\server\RubbishService.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\model\rubbish.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\model\grades.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\util\OriginFilter.java
@@ -35,5 +39,7 @@ C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\model\us
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\controller\RecycleWorkerController.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\model\user_buy.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\RecycleApplication.java
+C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\controller\GradesController.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\dao\user_supMapper.java
 C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\aop\SystemControllerLog.java
+C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\controller\RubishController.java
