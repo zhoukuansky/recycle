@@ -14,7 +14,7 @@ public class JwtToken {
     //创建token
     public static String createToken(Map<String, Object> claims) {
         //System.out.println(System.currentTimeMillis());
-        System.out.println(claims);
+        //System.out.println(claims);
         return Jwts.builder()
                 .setClaims(claims)
                 .setExpiration(new Date(System.currentTimeMillis() + 60 * 60 * 1000 * 10))

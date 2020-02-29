@@ -40,10 +40,10 @@ public class UserInterceptor implements HandlerInterceptor {
         }
         //System.out.println("1111111111111111111111111111111");//登录接口不经过这儿
         String tokenData[] = new String[2];
-        System.out.println(claims.get("type").toString());
         tokenData[0] = claims.get("type").toString();
         tokenData[1] = claims.get("id").toString();
         httpServletRequest.setAttribute("currentUser", tokenData);
+        //System.out.println(claims);//包括id,type,和过期时间
         return true;
     }
 
