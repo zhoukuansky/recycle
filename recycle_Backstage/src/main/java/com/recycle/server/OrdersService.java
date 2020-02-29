@@ -59,8 +59,8 @@ public class OrdersService {
         order.setStatus(2);
         order.setOrder_time_deal(new Date());
         //order.setOrder_time_finish(null);
-        System.out.println(order.getOrder_time_finish());
-        System.out.println(order.getOrder_time_deal());
+        //System.out.println(order.getOrder_time_finish());
+        //System.out.println(order.getOrder_time_deal());
         mapper.updateByPrimaryKeySelective(order);
         return mapper.selectByPrimaryKey(id);
     }

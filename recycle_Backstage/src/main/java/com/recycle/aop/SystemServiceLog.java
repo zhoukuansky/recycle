@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 @Target({ElementType.PARAMETER, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface SystemControllerLog {
+public @interface SystemServiceLog {
     String logAction() default "";
 
     String logContent() default "";

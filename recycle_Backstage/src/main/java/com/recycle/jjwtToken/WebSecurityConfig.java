@@ -18,8 +18,6 @@ public class WebSecurityConfig extends WebMvcConfigurationSupport {
                         (
                                 "/loginAndRegister/login",
                                 "/loginAndRegister/register",
-                                "/aop/hello",
-                                "/csrf",
                                 "/swagger-ui.html",
                                 "/swagger-resources",
                                 "/swagger-resources/**",
@@ -39,10 +37,10 @@ public class WebSecurityConfig extends WebMvcConfigurationSupport {
                 .addResourceLocations("classpath:/public/")
                 .addResourceLocations("classpath:/webapp/");
         //System.out.println("*****************************");
-        registry.addResourceHandler("/ll/**")
-//                .addResourceLocations("file:/webapps/recycle_front");
-                .addResourceLocations("file:/usr/apps/")
-                .addResourceLocations("file:C:/Users/HP/Desktop/recycle/recycle_front/");
+//        registry.addResourceHandler("/ll/**")
+//                .addResourceLocations("file:/webapps/recycle_front")
+//                .addResourceLocations("file:/usr/apps/")
+//                .addResourceLocations("file:C:/Users/HP/Desktop/recycle/recycle_front/");
         super.addResourceHandlers(registry);
     }
 

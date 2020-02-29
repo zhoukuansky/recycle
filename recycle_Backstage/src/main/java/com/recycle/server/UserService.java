@@ -1,6 +1,7 @@
 package com.recycle.server;
 
 import com.github.pagehelper.PageHelper;
+import com.recycle.aop.SystemServiceLog;
 import com.recycle.dao.user_buyMapper;
 import com.recycle.dao.user_buy_workerMapper;
 import com.recycle.dao.user_creMapper;
@@ -70,6 +71,7 @@ public class UserService {
         }
     }
 
+    @SystemServiceLog(logAction = "login", logContent = "用户登陆")
     public Map login(String tel, String password, int type) throws Exception {
         Map loginMap = new HashMap();
         //Object loginUser=null;

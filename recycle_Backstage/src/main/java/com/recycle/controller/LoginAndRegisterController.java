@@ -4,6 +4,7 @@ import com.recycle.aop.SystemControllerLog;
 import com.recycle.exception.ExceptionHandle;
 import com.recycle.exception.ResultUtil;
 import com.recycle.jjwtToken.CurrentUser;
+import com.recycle.jjwtToken.PassToken;
 import com.recycle.model.Result;
 import com.recycle.server.UserService;
 import io.swagger.annotations.Api;
@@ -46,7 +47,8 @@ public class LoginAndRegisterController {
     }
 
     @GetMapping("/login")
-    @SystemControllerLog(logAction = "login", logContent = "用户登陆")
+    @PassToken
+    //@SystemControllerLog(logAction = "login", logContent = "用户登陆")
     @ApiOperation(value = "用户登陆", notes = "用户登陆")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "tel", value = "用户tel", required = true, dataType = "String"),
@@ -66,7 +68,7 @@ public class LoginAndRegisterController {
     }
 
     @PostMapping("/updatePassword")
-    @SystemControllerLog(logAction = "updatePassword", logContent = "修改密码")
+    //@SystemControllerLog(logAction = "updatePassword", logContent = "修改密码")
     @ApiOperation(value = "修改密码", notes = "修改密码")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "password", value = "密码", required = true, dataType = "String"),
