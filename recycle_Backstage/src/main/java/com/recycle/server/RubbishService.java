@@ -7,7 +7,6 @@ import com.recycle.exception.ExceptionEnum;
 import com.recycle.model.PageResultBean;
 import com.recycle.model.rubbish;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -27,7 +26,7 @@ public class RubbishService {
     }
 
     public Object findAllRubbish(Integer pageNum, Integer pageSize) {
-        Sort sort = new Sort(Sort.Direction.ASC, "Id");
+        //Sort sort = new Sort(Sort.Direction.ASC, "Id");
         PageHelper.startPage(pageNum, pageSize, "id ASC");
         return new PageResultBean<rubbish>(mapper.findAll());
     }

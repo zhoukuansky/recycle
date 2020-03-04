@@ -7,7 +7,6 @@ import com.recycle.exception.ExceptionEnum;
 import com.recycle.model.PageResultBean;
 import com.recycle.model.orders;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -31,13 +30,13 @@ public class OrdersService {
     }
 
     public Object findNewOrders(Integer pageNum, Integer pageSize) {
-        Sort sort = new Sort(Sort.Direction.DESC, "order_time_begin");
+        //Sort sort = new Sort(Sort.Direction.DESC, "order_time_begin");
         PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
         return new PageResultBean<orders>(mapper.findNewOrders());
     }
 
     public Object findUserAllOrders(int user_c_id, Integer pageNum, Integer pageSize, int status) {
-        Sort sort = new Sort(Sort.Direction.ASC, "Id");
+        //Sort sort = new Sort(Sort.Direction.ASC, "Id");
         if (status == 1) {
             PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
         } else if (status == 2) {
@@ -66,7 +65,7 @@ public class OrdersService {
     }
 
     public Object findRecycleAllOrders(int user_b_id, Integer pageNum, Integer pageSize, int status) {
-        Sort sort = new Sort(Sort.Direction.ASC, "Id");
+        //Sort sort = new Sort(Sort.Direction.ASC, "Id");
         if (status == 1) {
             PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
         } else if (status == 2) {
@@ -78,7 +77,7 @@ public class OrdersService {
     }
 
     public Object findAllOrders(Integer pageNum, Integer pageSize, int status) {
-        Sort sort = new Sort(Sort.Direction.ASC, "Id");
+        //Sort sort = new Sort(Sort.Direction.ASC, "Id");
         if (status == 1) {
             PageHelper.startPage(pageNum, pageSize, "order_time_begin DESC");
         } else if (status == 2) {

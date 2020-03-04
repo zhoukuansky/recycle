@@ -9,10 +9,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-
+/**
+ * @author HP
+ * public class UserInterceptor implements HandlerInterceptor
+ * 继承HandlerInterceptorAdapter比实现HandlerInterceptor灵活，可以只写需要的方法
+ */
 public class UserInterceptor implements HandlerInterceptor {
-    //    @Autowired
-//    private UserService service;
+
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object object) throws Exception {
         String token = httpServletRequest.getHeader("token");// 从 http 请求头中取出 token
@@ -30,7 +33,7 @@ public class UserInterceptor implements HandlerInterceptor {
 //                return true;
 //            }
 //        }
-        if (token.isEmpty()) {
+        if (null == token) {
             throw new DescribeException(ExceptionEnum.NEED_LOGIN);
         }
         // 执行认证

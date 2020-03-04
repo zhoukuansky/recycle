@@ -11,6 +11,7 @@ import java.util.List;
 
 @Configuration
 public class WebSecurityConfig extends WebMvcConfigurationSupport {
+    //注册UserInterceptor到Springboot中
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(userInterceptor()).addPathPatterns("/**")
@@ -19,6 +20,8 @@ public class WebSecurityConfig extends WebMvcConfigurationSupport {
                                 "/loginAndRegister/login",
                                 "/loginAndRegister/register",
                                 "/swagger-ui.html",
+                                "/",
+                                "/csrf",
                                 "/swagger-resources",
                                 "/swagger-resources/**",
                                 "/recycle",
@@ -50,7 +53,7 @@ public class WebSecurityConfig extends WebMvcConfigurationSupport {
         return new UserInterceptor();
     }
 
-
+    //注册currentUserMethodArgumentResolver，到springboot中
     @Override
     protected void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
         //System.out.println("*****************************");

@@ -25,9 +25,6 @@ public class CurrentUserMethodArgumentResolver implements HandlerMethodArgumentR
                                   NativeWebRequest nativeWebRequest, WebDataBinderFactory webDataBinderFactory) throws Exception {
         //HttpServletRequest request = nativeWebRequest.getNativeRequest(HttpServletRequest.class);
         String[] tokenData = (String[]) nativeWebRequest.getAttribute("currentUser", RequestAttributes.SCOPE_REQUEST);
-//        if (tokenData==null) {
-//            user = "游客";
-//        }
         return tokenData;
     }
 }

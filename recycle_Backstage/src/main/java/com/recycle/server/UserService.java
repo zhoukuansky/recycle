@@ -14,7 +14,6 @@ import com.recycle.model.user_buy;
 import com.recycle.model.user_cre;
 import com.recycle.model.user_sup;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -122,17 +121,17 @@ public class UserService {
 
     public Object findAllUser(Integer pageNum, Integer pageSize, int type) throws Exception {
         if (1 == type) {
-            Sort sort = new Sort(Sort.Direction.ASC, "Id");
+            //Sort sort = new Sort(Sort.Direction.ASC, "Id");
             PageHelper.startPage(pageNum, pageSize, "id ASC");
             return new PageResultBean<user_buy>(userBuyMapper.findAll());
         }
         if (2 == type) {
-            Sort sort = new Sort(Sort.Direction.ASC, "Id");
+            //Sort sort = new Sort(Sort.Direction.ASC, "Id");
             PageHelper.startPage(pageNum, pageSize, "id ASC");
             return new PageResultBean<user_cre>(userCreMapper.findAll());
         }
         if (3 == type) {
-            Sort sort = new Sort(Sort.Direction.ASC, "Id");
+            //Sort sort = new Sort(Sort.Direction.ASC, "Id");
             PageHelper.startPage(pageNum, pageSize, "id ASC");
             return new PageResultBean<user_sup>(useSuprMapper.findAll());
         }

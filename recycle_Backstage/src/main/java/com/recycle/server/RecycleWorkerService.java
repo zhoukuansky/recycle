@@ -8,7 +8,6 @@ import com.recycle.model.PageResultBean;
 import com.recycle.model.user_buy;
 import com.recycle.model.user_buy_worker;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -36,7 +35,7 @@ public class RecycleWorkerService {
     }
 
     public Object findAllwordker(Integer pageNum, Integer pageSize) {
-        Sort sort = new Sort(Sort.Direction.ASC, "Id");
+        //Sort sort = new Sort(Sort.Direction.ASC, "Id");
         PageHelper.startPage(pageNum, pageSize, "id ASC");
         return new PageResultBean<user_buy>(mapper.findAll());
     }

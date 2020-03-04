@@ -5,7 +5,6 @@ import com.recycle.model.SystemLog;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -86,10 +85,11 @@ public class SystemLogAspect {
 
     /**
      * 前置通知 用于拦截Controller层记录用户的操作
+     * 原本是Before("controllerAspect()")，日志应该是完成后记录。所以改成 @AfterReturning("controllerAspect()")
      *
      * @param joinPoint 切点
      */
-    @Before("controllerAspect()")
+    @AfterReturning("controllerAspect()")
     public void doBefore(JoinPoint joinPoint) {
 
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder
@@ -142,7 +142,7 @@ public class SystemLogAspect {
 
 
     /**
-     * 后置通知 用于拦截Controller层记录用户的操作
+     * 后置通知 用于拦截Controller层记录用户的登录操作
      *
      * @param joinPoint 切点
      */
