@@ -1,5 +1,5 @@
-var url="http://114.115.243.22/recycle";
-var token = getCookie('token')
+var url="http://114.115.243.22:8080/recycle";
+var token = getCookie('token');
 
 var userVue = new Vue({
 	el: '#user',
