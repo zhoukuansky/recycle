@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.recycle.dao.SystemLogMapper">
+    <resultMap id="BaseResultMap" type="com.recycle.model.SystemLog">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="logIP" jdbcType="VARCHAR" property="logIP"/>
+        <result column="logAction" jdbcType="VARCHAR" property="logAction"/>
+        <result column="logContent" jdbcType="VARCHAR" property="logContent"/>
+        <result column="flagID" jdbcType="VARCHAR" property="flagID"/>
+        <result column="logTime" jdbcType="VARCHAR" property="logTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, logIP, logAction, logContent, flagID, logTime
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from log
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from log
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.recycle.model.SystemLog">
+    insert into log ( logIP, logAction,
+      logContent, flagID, logTime
+      )
+    values ( #{logIP,jdbcType=VARCHAR}, #{logAction,jdbcType=VARCHAR},
+      #{logContent,jdbcType=VARCHAR}, #{flagID,jdbcType=VARCHAR}, #{logTime,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.recycle.model.SystemLog">
+        insert into log
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="logIP != null">
+                logIP,
+            </if>
+            <if test="logAction != null">
+                logAction,
+            </if>
+            <if test="logContent != null">
+                logContent,
+            </if>
+            <if test="flagID != null">
+                flagID,
+            </if>
+            <if test="logTime != null">
+                logTime,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="logIP != null">
+                #{logIP,jdbcType=VARCHAR},
+            </if>
+            <if test="logAction != null">
+                #{logAction,jdbcType=VARCHAR},
+            </if>
+            <if test="logContent != null">
+                #{logContent,jdbcType=VARCHAR},
+            </if>
+            <if test="flagID != null">
+                #{flagID,jdbcType=VARCHAR},
+            </if>
+            <if test="logTime != null">
+                #{logTime,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.recycle.model.SystemLog">
+        update log
+        <set>
+            <if test="logIP != null">
+                logIP = #{logIP,jdbcType=VARCHAR},
+            </if>
+            <if test="logAction != null">
+                logAction = #{logAction,jdbcType=VARCHAR},
+            </if>
+            <if test="logContent != null">
+                logContent = #{logContent,jdbcType=VARCHAR},
+            </if>
+            <if test="flagID != null">
+                flagID = #{flagID,jdbcType=VARCHAR},
+            </if>
+            <if test="logTime != null">
+                logTime = #{logTime,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.recycle.model.SystemLog">
+    update log
+    set logIP = #{logIP,jdbcType=VARCHAR},
+      logAction = #{logAction,jdbcType=VARCHAR},
+      logContent = #{logContent,jdbcType=VARCHAR},
+      flagID = #{flagID,jdbcType=VARCHAR},
+      logTime = #{logTime,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

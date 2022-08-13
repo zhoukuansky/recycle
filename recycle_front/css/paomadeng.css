@@ -1,0 +1,31 @@
+.paomadeng_box{
+	width: 1400px;
+	margin: 0 auto;
+}						
+.paomadeng{
+	margin-top: 50px;
+	margin-left:300px;
+	width:700px;
+	height:120px;
+	overflow:hidden;
+}
+	.tupian{
+	width:1400px;
+    height:120px;
+	animation:donghua 12s infinite running ;
+}
+.tupian img{
+	width:135px;
+	height:120px;
+}
+.tupian img:hover{
+	cursor: pointer;
+}
+@keyframes donghua{
+	from{
+		margin-left:0px;
+	}
+	to{
+		margin-left:-700px;
+}	
+}

@@ -1,0 +1,117 @@
+
+.pagebody {
+	padding:102px 0 30px 0;
+	width:100%;
+	background:#f0f0f0;
+	padding-bottom: 30px;
+}
+.pagebody a {
+	text-decoration: none;
+	color: #000000;
+}
+.dalei {
+	width:1200px;
+	margin:0 auto;
+	border-bottom: 1px solid #d0d0d0;
+}
+
+.dalei ul {
+	height:20px;
+	margin:30px 0 20px 0;
+}
+
+.dalei ul li {
+	line-height:25px;
+	margin-right:30px;
+	color:#000000;
+	text-align:center;
+	float:left;
+}
+.fenlei:hover {
+	background-color: whitesmoke;
+	text-decoration: underline;
+}
+.dalei ul li a:hover{
+	background-color: whitesmoke;
+	text-decoration: underline;
+	color:#1CAFFC;
+}
+.xiaolei,.video {
+	width:1200px;
+	margin:15px auto;
+}
+
+.first:hover {
+	text-decoration:underline;
+	background-color:whitesmoke;
+}
+
+.leixing {
+	height:30px;
+	margin:8px 0;
+	text-align: center;
+}
+
+.leixing ul {
+	height:20px;
+	margin:5px 0 5px 0;
+}
+
+.leixing ul li {
+	height:20px;
+	margin-right:25px;
+	color:#000000;
+	text-align: center;
+	float:left;
+}
+.leixing ul li a:hover{
+	background-color: whitesmoke;
+	text-decoration: underline;
+	color:#1CAFFC;
+}
+.com_video {
+	margin-left: -20px;
+	display: inline-block;
+}
+
+.com_video li {
+	float: left;
+	width: 224px;
+	background: #fff;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	transition: box-shadow .6s ease;
+	-webkit-transition: box-shadow .6s ease;
+}
+
+.box {
+	width: 224px;
+	height: 126px;
+	display: block;
+	position: relative;
+}
+.box img{
+	width: 224px;
+	height: 126px;
+}
+
+.com_video .detail {
+	padding: 4px 6px;
+}
+
+.com_video .title {
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 22px;
+	color: #232323;
+}
+
+.com_video .subtitle {
+	font-size: 12px;
+	color: #949ba1;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+

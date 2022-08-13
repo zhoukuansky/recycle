@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.recycle.dao.user_buy_workerMapper">
+    <resultMap id="BaseResultMap" type="com.recycle.model.user_buy_worker">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="user_b_id" jdbcType="INTEGER" property="user_b_id"/>
+        <result column="tel" jdbcType="VARCHAR" property="tel"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, name, user_b_id, tel
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user_buy_worker
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        *
+        from user_buy_worker
+    </select>
+    <select id="findUserInformation" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from user_buy_worker
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_buy_worker
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <delete id="deleteByRecycleID" parameterType="java.lang.Integer">
+    delete from user_buy_worker
+    where user_b_id = #{RecycleID,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="java.util.Map">
+    insert into user_buy_worker (name, user_b_id,
+      tel)
+    values ( #{name,jdbcType=VARCHAR}, #{user_b_id,jdbcType=INTEGER},
+      #{tel,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.recycle.model.user_buy_worker">
+        insert into user_buy_worker
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="user_b_id != null">
+                user_b_id,
+            </if>
+            <if test="tel != null">
+                tel,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="user_b_id != null">
+                #{user_b_id,jdbcType=INTEGER},
+            </if>
+            <if test="tel != null">
+                #{tel,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.recycle.model.user_buy_worker">
+        update user_buy_worker
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="user_b_id != null">
+                user_b_id = #{user_b_id,jdbcType=INTEGER},
+            </if>
+            <if test="tel != null">
+                tel = #{tel,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.recycle.model.user_buy_worker">
+    update user_buy_worker
+    set name = #{name,jdbcType=VARCHAR},
+      user_b_id = #{user_b_id,jdbcType=INTEGER},
+      tel = #{tel,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

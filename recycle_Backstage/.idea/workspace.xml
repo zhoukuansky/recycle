@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a8ff3e47-f50f-49b0-a818-cc57dbecd834" name="Default Changelist" comment="调正框架swagger2">
+      <change afterPath="$PROJECT_DIR$/.idea/recycle_Backstage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/recycle.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.recycle.RecycleApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.recycle.RecycleApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/recycle.kotlin_module" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/recycle$RecycleApplication.ic" NAME="RecycleApplication Coverage Results" MODIFIED="1582993388429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="recycle" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="AnnotationType" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\maven\repository" />
+        <option name="mavenHome" value="F:/maven" />
+        <option name="userSettingsFile" value="F:\maven\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1acwENkInqJs9dXb80B8KWgwXE9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583416342226" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/recycle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.21839081" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.recycle.aop" />
+      <recent name="com.recycle" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\recycle\recycle_Backstage\src\main\java\com\recycle\mapper" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="RecycleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="recycle_Backstage" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.recycle.RecycleApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.54" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_recycle" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53051" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a8ff3e47-f50f-49b0-a818-cc57dbecd834" name="Default Changelist" comment="" />
+      <created>1550229617531</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550229617531</updated>
+      <workItem from="1550229619027" duration="262000" />
+      <workItem from="1550230156319" duration="8385000" />
+      <workItem from="1550554918874" duration="8059000" />
+      <workItem from="1550563019393" duration="7691000" />
+      <workItem from="1550809450845" duration="2163000" />
+      <workItem from="1551073393747" duration="4233000" />
+      <workItem from="1551279499989" duration="667000" />
+      <workItem from="1551603183734" duration="3229000" />
+      <workItem from="1551611025417" duration="220000" />
+      <workItem from="1551769064491" duration="3592000" />
+      <workItem from="1551786901213" duration="266000" />
+      <workItem from="1551787462011" duration="313000" />
+      <workItem from="1551788180066" duration="25000" />
+      <workItem from="1551887715126" duration="1948000" />
+      <workItem from="1551958081056" duration="3034000" />
+      <workItem from="1551971437345" duration="5400000" />
+      <workItem from="1552050231378" duration="1367000" />
+      <workItem from="1552060550807" duration="5138000" />
+      <workItem from="1552065999326" duration="5624000" />
+      <workItem from="1552103708626" duration="1248000" />
+      <workItem from="1582881638505" duration="1231000" />
+      <workItem from="1582954237644" duration="31046000" />
+      <workItem from="1583042417427" duration="16049000" />
+      <workItem from="1583069738207" duration="3787000" />
+      <workItem from="1583120156036" duration="14791000" />
+      <workItem from="1583149195276" duration="2285000" />
+      <workItem from="1583208253420" duration="2779000" />
+      <workItem from="1583239346967" duration="797000" />
+      <workItem from="1583397140614" duration="2792000" />
+      <workItem from="1583477200146" duration="1284000" />
+      <workItem from="1583747198283" duration="1072000" />
+      <workItem from="1587048079471" duration="4046000" />
+      <workItem from="1587052180967" duration="534000" />
+      <workItem from="1587052722085" duration="331000" />
+    </task>
+    <task id="LOCAL-00001" summary="调正框架swagger2">
+      <created>1582881962167</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582881962167</updated>
+    </task>
+    <task id="LOCAL-00002" summary="调正框架swagger2">
+      <created>1582882053632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582882053632</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="调正框架swagger2" />
+    <option name="LAST_COMMIT_MESSAGE" value="调正框架swagger2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="392" y="126" key="#Project_Structure" timestamp="1587052255262">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="392" y="126" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1587052255262" />
+    <state x="301" y="51" key="#RecycleApplication" timestamp="1587048563170">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="301" y="51" key="#RecycleApplication/0.0.1536.824@0.0.1536.824" timestamp="1587048563170" />
+    <state x="309" y="0" width="1155" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587052800745">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="309" y="0" width="1155" height="824" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1587052800745" />
+    <state x="393" y="73" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable" timestamp="1587048755952">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="73" key="#com.intellij.j2ee.appServerIntegrations.ApplicationServersConfigurable/0.0.1536.824@0.0.1536.824" timestamp="1587048755952" />
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom" timestamp="1587053052539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587053052539" />
+    <state width="1493" height="253" key="GridCell.Tab.0.center" timestamp="1587053052539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1587053052539" />
+    <state width="1493" height="253" key="GridCell.Tab.0.left" timestamp="1587053052538">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1587053052538" />
+    <state width="1493" height="253" key="GridCell.Tab.0.right" timestamp="1587053052539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1587053052539" />
+    <state width="1493" height="253" key="GridCell.Tab.1.bottom" timestamp="1587053052539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1587053052539" />
+    <state width="1493" height="253" key="GridCell.Tab.1.center" timestamp="1587053052539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1587053052539" />
+    <state width="1493" height="253" key="GridCell.Tab.1.left" timestamp="1587053052539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1587053052539" />
+    <state width="1493" height="253" key="GridCell.Tab.1.right" timestamp="1587053052539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="253" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1587053052539" />
+    <state x="336" y="5" width="1033" height="819" key="SettingsEditor" timestamp="1587052945558">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="336" y="5" width="1033" height="819" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1587052945558" />
+    <state x="565" y="193" key="chooseDestDirectoryDialog" timestamp="1587052551551">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="565" y="193" key="chooseDestDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587052551551" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/recycle/controller/OrdersController.java</url>
+          <line>129</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="clean package -Dmaven.test.skip=true" />
+  </component>
+</project>
