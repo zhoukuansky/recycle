@@ -1,4 +1,4 @@
-var url="http://114.115.243.22:8080/recycle";
+var url="https://zk.zksky.top/recycle";
 var loginVue = new Vue({
     el: '#login',
     data: {
